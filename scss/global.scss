@@ -18,7 +18,7 @@ main {
 }
 
 [class*="__container"] {
-	max-width: calc($maxWidthContainer + 30px); // Enter the value
+	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
 	margin: 0 auto;
 	padding: 0px 15px;
 }
