@@ -1,0 +1,24 @@
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+.page {
+}
+
+[class*="__container"] {
+	max-width: calc($maxWidthContainer + 30px); // Enter the value
+	margin: 0 auto;
+	padding: 0px 15px;
+}
