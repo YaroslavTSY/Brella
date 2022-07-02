@@ -1,6 +1,7 @@
-.img-fluid {
-	width: 100%;
-	height: auto;
+@import "colors";
+
+body {
+	font-family: "Raleway", "Roboto", sans-serif;
 }
 
 .wrapper {
@@ -21,4 +22,9 @@ main {
 	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
 	margin: 0 auto;
 	padding: 0px 15px;
+}
+
+.img-fluid {
+	width: 100%;
+	height: auto;
 }
