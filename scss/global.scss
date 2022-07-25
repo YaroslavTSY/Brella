@@ -1,7 +1,47 @@
-@import "colors";
-
 body {
 	font-family: "Raleway", "Roboto", sans-serif;
+	background-color: $white-color;
+	color: $main-color;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: $main-color;
+}
+
+button {
+	background: none;
+}
+
+[class*="__container"] {
+	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+[class*="__container-big"] {
+	@extend [class*="__container"];
+	max-width: calc(1320px + 30px);
+}
+
+%visible {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+%invisible {
+	transform: translate(0, -50%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.img-fluid {
+	width: 100%;
+	height: auto;
 }
 
 .wrapper {
@@ -18,13 +58,15 @@ main {
 .page {
 }
 
-[class*="__container"] {
-	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
-	margin: 0 auto;
-	padding: 0px 15px;
-}
-
-.img-fluid {
-	width: 100%;
-	height: auto;
+.btn {
+	min-width: fit-content;
+	&__green {
+		padding: em(10px) em(14px);
+		background-color: $accent-color;
+		border-radius: 6px;
+		color: $white-color;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.43em;
+	}
 }

@@ -7,25 +7,44 @@ functions.isMobile;
 //! Checking Mobile or PC device
 if (functions.isMobile.any()) {
 	document.body.classList.add('_touch');
-	//! Opening second menu (add class "_active" while click on point) 
-	let menuArrows = document.querySelectorAll('.menu__open-link')
-	if (menuArrows.length > 0) {
-		for (let index = 0; index < menuArrows.length; index++) {
-			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function (e) {
-				menuArrow.classList.toggle('_active');
-			});
-		}
-	}
 } else {
 	document.body.classList.add('_pc');
 }
 
 
-// window.onload = function () {
-// 	//Yandex map's imported from map.js
-// 	map
+let login = document.querySelector('.login')
+login.addEventListener("click", function (e) {
+	login.classList.toggle('_active');
+})
+
+const iconMenu = document.querySelector('.menu__icon');
+const headerContent = document.querySelector('.header__content');
+if (iconMenu) {
+	iconMenu.addEventListener('click', function (e) {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		headerContent.classList.toggle('_active');
+	});
+}
+
+// let nav = document.getElementById("nav");
+// let pointer = document.getElementById("pointer");
+// let links = document.getElementsByClassName("menu__link");
+
+// pointer.style.width = "100px";
+
+// for (let i = 0; i < links.length; i++) {
+// 	let current = links[i];
+// 	current.dataset.order = i * 100 + "%";
+// 	current.addEventListener('hover', movePointer);
 // }
+
+// function movePointer(e) {
+// 	let order = e.currentTarget.dataset.order;
+// 	pointer.style.transform = "translate3d(" + order + ",0,0)";
+// 	pointer.style.width = this.current.width;
+// }
+
 
 
 

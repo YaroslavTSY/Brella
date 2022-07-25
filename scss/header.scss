@@ -1,20 +1,170 @@
 .header {
-	&__container {
+	position: fixed;
+	display: flex;
+	width: 100%;
+	@include adaptiv-value("height", 90, 60, 0);
+	padding: em(25px) 0;
+	background-color: $white-color;
+	color: $main-color;
+	&__container-big {
+		display: flex;
+		align-items: center;
+		flex: 1 1 auto;
 	}
 
-	&__menu {
+	&__wrapper {
+		display: flex;
+		flex: 1 1 auto;
+		align-items: center;
+	}
+
+	&__logo {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		z-index: 2;
+	}
+
+	&__content {
+		display: flex;
+	}
+
+	&__action {
+		display: flex;
+		align-items: center;
+		z-index: 2;
+	}
+
+	&__theme {
 	}
 }
+.logo {
+}
 .menu {
+	display: flex;
+	@include adaptiv-value("margin-right", 70, 7, 1);
 	&__icon {
+		display: none;
 	}
 
 	&__body {
+		display: flex;
+		align-items: center;
+		position: relative;
 	}
 
 	&__list {
+		> :not(:last-child) {
+			@include adaptiv-value("margin-right", 50, 0, 1);
+		}
+		li {
+			min-width: fit-content;
+			&:hover {
+				.menu__link {
+					text-decoration: underline;
+				}
+			}
+		}
+		z-index: 2;
+		@media (min-width: 991px) {
+			display: flex;
+			align-items: center;
+			> li {
+				padding: em(10px) 0;
+			}
+		}
 	}
 
 	&__link {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.43em;
+		min-width: fit-content;
+	}
+
+	&__pointer {
+		z-index: 1;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: $accent-color;
+		height: em(1.5px);
+		transition: all 0.3s ease 0s;
+		border-radius: 0.3em;
+		will-change: transform;
+		backface-visibility: hidden;
 	}
 }
+
+.header__btns {
+	display: flex;
+	align-items: center;
+	@include adaptiv-value("margin-right", 25, 10, 1);
+	> :not(:last-child) {
+		@include adaptiv-value("margin-right", 29, 5, 1);
+	}
+}
+.header-btn {
+	&__demo {
+	}
+
+	&__login {
+	}
+}
+.login {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 1.54em;
+	position: relative;
+	padding: 10px 0;
+	&::after {
+		content: " ";
+		border: solid $main-color;
+		border-width: 0 1.9px 1.9px 0;
+		display: inline-block;
+		padding: 3.5px;
+		transition: all 0.3s ease 0s;
+		transform: rotate(45deg);
+		margin-left: em(10px);
+		margin-top: em(-5px);
+	}
+	.login-list {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		padding: 7.5px;
+		border-radius: 3px;
+		background-color: gainsboro;
+		transition: all 0.6s ease 0s;
+
+		@extend %invisible;
+		> li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1 1 auto;
+		}
+		a {
+			color: $accent-color;
+		}
+	}
+}
+.login._active,
+body._pc .login:hover {
+	&::after {
+		transform: rotate(-135deg);
+		margin-top: em(5px);
+	}
+
+	.login-list {
+		@extend %visible;
+	}
+}
+
+//* --------------------------------- *//
+
+//* --------------------------------- *//
