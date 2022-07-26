@@ -11,6 +11,7 @@ if (functions.isMobile.any()) {
 	document.body.classList.add('_pc');
 }
 
+window.addEventListener('load', functions.pageTheme);
 
 let login = document.querySelector('.login')
 login.addEventListener("click", function (e) {

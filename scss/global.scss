@@ -1,14 +1,15 @@
 body {
+	transition: all 1s ease 0s;
 	font-family: "Raleway", "Roboto", sans-serif;
-	background-color: $white-color;
-	color: $main-color;
+	background-color: var(--base-color);
+	color: var(--main-color);
 	&._lock {
 		overflow: hidden;
 	}
 }
 
 a {
-	color: $main-color;
+	color: var(--main-color);
 }
 
 button {
@@ -62,11 +63,16 @@ main {
 	min-width: fit-content;
 	&__green {
 		padding: em(10px) em(14px);
-		background-color: $accent-color;
+		background-color: var(--accent-color);
 		border-radius: 6px;
-		color: $white-color;
+		color: var(--base-color);
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 1.43em;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: var(--main-color);
+			filter: $drop-shadow;
+		}
 	}
 }

@@ -24,7 +24,7 @@
 		margin-right: 0;
 	}
 	.menu__icon {
-		margin-left: em(10px);
+		@include adaptiv-value("margin-left", 40, 15, 0);
 		z-index: 5;
 		display: block;
 		position: relative;
@@ -40,7 +40,7 @@
 			height: 5%;
 			width: 100%;
 			transition: all 0.3s ease 0s;
-			background-color: $main-color;
+			background-color: var(--main-color);
 		}
 		&::before,
 		&::after {
@@ -75,7 +75,7 @@
 			margin-bottom: em(20px);
 		}
 		&-btn__demo {
-			background-color: $main-color;
+			background-color: var(--main-color);
 		}
 		&__content {
 			overflow: auto;
@@ -87,7 +87,7 @@
 			padding: em(100px) em(30px) em(30px) em(30px);
 			flex-direction: column;
 			align-items: center;
-			background-color: rgba($color: $accent-color, $alpha: 0.7);
+			background-color: var(--light-color);
 			transition: top 0.3s ease 0s;
 			&::before {
 				content: " ";
@@ -96,12 +96,17 @@
 				top: 0;
 				left: 0;
 				@include adaptiv-value("height", 90, 60, 0);
-				background-color: rgba($color: $white-color, $alpha: 0.9);
+				background-color: var(--base-color);
 				z-index: 3;
 			}
 			&._active {
 				top: 0;
 			}
+		}
+		&-content__wrapper {
+			align-items: center;
+			flex-direction: column;
+			position: relative;
 		}
 	}
 	.menu {
@@ -118,14 +123,21 @@
 			font-size: em(24px);
 		}
 	}
-	.login-list {
-		min-width: 200px;
-		min-height: 75px;
-		flex-direction: row;
-		margin: em(15px);
-		li {
-			padding: em(15px);
-			font-size: em(18px);
+	.login {
+		position: static;
+		&-list {
+			@include adaptiv-value("width", 768, 300, 1);
+			height: em(75px);
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-top: em(15px);
+			top: 100%;
+			right: 50%;
+			gap: em(20px);
+			li {
+				padding: em(15px);
+				font-size: em(18px);
+			}
 		}
 	}
 }
