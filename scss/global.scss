@@ -57,6 +57,7 @@ main {
 }
 
 .page {
+	@include adaptiv-value("margin-top", 90, 60, 0);
 }
 
 .btn {
@@ -64,7 +65,7 @@ main {
 	&__green {
 		padding: em(10px) em(14px);
 		background-color: var(--accent-color);
-		border-radius: 6px;
+		border-radius: $defautBorderRadius;
 		color: var(--base-color);
 		font-weight: 700;
 		font-size: 14px;
@@ -72,7 +73,14 @@ main {
 		transition: all 0.3s ease 0s;
 		&:hover {
 			background-color: var(--main-color);
-			filter: $drop-shadow;
+			filter: $dropShadow;
 		}
 	}
+}
+
+.title {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.28em;
 }

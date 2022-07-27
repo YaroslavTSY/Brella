@@ -1,0 +1,21 @@
+html {
+	--orange-color: #f0a446;
+	--gray-color: #757575;
+	.wrapper {
+		transition: color 0.3s ease 0s;
+	}
+	&.light {
+		--main-color: #214e41;
+		--icon-color: var(--main-color);
+		--base-color: #ffffff;
+		--accent-color: #43806c;
+		--light-color: #e3eeed;
+	}
+	&.dark {
+		--main-color: rgb(114, 194, 181);
+		--icon-color: var(--main-color);
+		--base-color: rgba(43, 43, 43, 1);
+		--accent-color: rgb(131, 231, 193);
+		--light-color: rgba(73, 77, 77, 1);
+	}
+}

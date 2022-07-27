@@ -1,0 +1,12 @@
+//Adaptiv value
+$maxWidth: 1440;
+$maxWidthContainer: 1200;
+
+// Colors
+@import "vars-colors";
+
+// Style's
+$defautBorderRadius: 6px;
+
+// Effects
+$dropShadow: drop-shadow(0px 1px 3px var(--main-color));

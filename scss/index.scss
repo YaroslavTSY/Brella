@@ -1,0 +1,61 @@
+.page__index {
+}
+.hero {
+	background: url(../img/hero-bg.jpg) 60% 50% / cover no-repeat;
+	&__container {
+	}
+
+	&__content {
+		padding: 160px 0 280px 0;
+	}
+
+	&__offer {
+	}
+
+	&__features {
+	}
+}
+html.dark .hero {
+	background: linear-gradient(90deg, rgba(0, 0, 0, 1) -75%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 80%),
+		url(../img/hero-bg.jpg) 60% 50% / cover no-repeat;
+}
+.offer {
+	&__title {
+		@include adaptiv-value("max-width", 520, 300, 0);
+		@include adaptiv-value("margin-bottom", 40, 24, 0);
+	}
+
+	&__text {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.5em;
+		@include adaptiv-value("margin-bottom", 16, 12, 0);
+	}
+
+	&__form {
+		display: flex;
+		max-width: em(403px);
+		border-radius: $defautBorderRadius;
+		overflow: hidden;
+		background: var(--base-color);
+	}
+
+	&__input {
+		flex: 1 1 auto;
+		padding: em(20px);
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.43em;
+		color: #222222;
+		&::placeholder {
+			color: #222222;
+		}
+	}
+
+	&__submit {
+		padding: em(20px) em(35px);
+		border-radius: 0;
+	}
+}
+.features {
+}
