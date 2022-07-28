@@ -11,6 +11,9 @@
 	}
 }
 @media (min-width: em(768px)) {
+	.block-features__img {
+		margin-right: em(10px);
+	}
 }
 @media (min-width: em(576px)) {
 }
@@ -142,6 +145,30 @@
 	}
 }
 @media (max-width: em(767px)) {
+	.hero {
+		background-position: 40%, 50%;
+	}
+	.features {
+		text-align: center;
+		flex-direction: column;
+	}
+	.block-features {
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
 }
 @media (max-width: em(575px)) {
+	.hero {
+		background: linear-gradient(
+					135deg,
+					rgba(255, 255, 255, 1) -75%,
+					rgba(255, 255, 255, 0.5) 35%,
+					rgba(255, 255, 255, 0) 80%
+				)
+				80%,
+			url(../img/hero-bg.jpg) 60% 50% / cover no-repeat;
+	}
+	.offer__form {
+		flex-direction: column;
+	}
 }

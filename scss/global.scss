@@ -1,5 +1,5 @@
 body {
-	transition: all 1s ease 0s;
+	transition: color 0.3s ease 0s;
 	font-family: "Raleway", "Roboto", sans-serif;
 	background-color: var(--base-color);
 	color: var(--main-color);
@@ -60,6 +60,25 @@ main {
 	@include adaptiv-value("margin-top", 90, 60, 0);
 }
 
+%underline {
+	&::after {
+		transition: width 0.3s ease 0s;
+		left: 50%;
+		transform: translate(-50%, 0);
+		content: " ";
+		position: absolute;
+		bottom: 1px;
+		width: 0%;
+		height: 2px;
+		background-color: var(--main-color);
+	}
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}
+
 .btn {
 	min-width: fit-content;
 	&__green {
@@ -81,6 +100,6 @@ main {
 .title {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
-	font-size: 36px;
+	font-size: em(36px);
 	line-height: 1.28em;
 }
