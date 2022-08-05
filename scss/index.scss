@@ -129,6 +129,8 @@ html.dark .features {
 	&__container {
 		max-width: calc(#{$maxWidthContainer}px);
 		padding: 0 rem(60px);
+		@include adaptiv-value("padding-right", 60, 15, 1);
+		@include adaptiv-value("padding-left", 60, 15, 1);
 	}
 
 	&__body {
@@ -163,6 +165,7 @@ html.dark .features {
 		margin-bottom: rem(26px);
 		line-height: 1.67em;
 		color: var(--gray-color);
+		max-width: rem(670px);
 	}
 	&__more {
 		position: relative;
@@ -173,7 +176,7 @@ html.dark .features {
 		line-height: 1em;
 		@extend %underline;
 	}
-	&__statistic {
+	&__stats {
 		img {
 			max-width: 100%;
 		}
@@ -181,5 +184,112 @@ html.dark .features {
 }
 .title {
 }
-.statistic {
+.stats {
+	&__body {
+		position: relative;
+		display: flex;
+		align-items: end;
+		gap: 3.9%;
+		overflow: hidden;
+		max-width: rem(670px);
+	}
+
+	&-pointer {
+		position: relative;
+		width: 1000%;
+		height: 2px;
+		background-color: var(--orange-color);
+		margin-top: rem(10px);
+		margin-bottom: rem(18px);
+		z-index: 1;
+		&__column {
+			@extend .stats-pointer;
+			display: none;
+			width: 100%;
+			padding: 0;
+			height: 2px;
+			bottom: 130px;
+			position: absolute;
+		}
+	}
+
+	&__content {
+		flex: 1 1 50%;
+		@include adaptiv-value("margin-bottom", 45, 15, 1);
+		// margin-bottom: rem(45px);
+	}
+
+	&__number {
+		font-family: "Roboto", sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: rem(70px);
+		line-height: em(90px, 70px);
+	}
+
+	&__text {
+		max-width: rem(225px);
+		font-weight: 700;
+		font-size: rem(13px);
+		line-height: em(22px, 13px);
+		letter-spacing: em(0.02px, 13px);
+		span {
+			text-decoration-line: underline;
+		}
+	}
+
+	&__columns {
+		flex: 1 1 46.07%;
+	}
+
+	&__desc {
+		margin-top: rem(10px);
+		text-align: right;
+		font-size: rem(13px);
+		line-height: em(22px, 13px);
+		color: var(--gray-color);
+	}
+}
+.column {
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	position: relative;
+	&__item {
+		position: relative;
+		padding: rem(22px) rem(20px) rem(42px) rem(20px);
+	}
+	&__absolute {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		min-width: max-content;
+	}
+	&__price {
+		top: 0;
+	}
+	&__value {
+		> div {
+			background-color: var(--accent-color);
+			width: rem(78px);
+		}
+	}
+	&__desc {
+		bottom: 0;
+	}
+}
+
+.deductible {
+	&__value {
+		> div {
+			height: rem(150px);
+		}
+	}
+}
+.annual-max {
+	&__value {
+		> div {
+			height: rem(300px);
+		}
+	}
 }
