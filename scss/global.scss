@@ -1,3 +1,7 @@
+:root {
+	font-size: $base-font-size;
+}
+
 body {
 	transition: color 0.3s ease 0s;
 	font-family: "Raleway", "Roboto", sans-serif;
@@ -82,7 +86,7 @@ main {
 .btn {
 	min-width: fit-content;
 	&__green {
-		padding: em(10px) em(14px);
+		padding: rem(10px) rem(14px);
 		background-color: var(--accent-color);
 		border-radius: $defautBorderRadius;
 		color: var(--base-color);
@@ -100,6 +104,6 @@ main {
 .title {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
-	font-size: em(36px);
+	font-size: rem(36px);
 	line-height: 1.28em;
 }

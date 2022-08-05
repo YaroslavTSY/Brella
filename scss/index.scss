@@ -27,7 +27,7 @@ html.dark .hero {
 }
 .offer {
 	&__title {
-		transition: color 0.1s ease 0;
+		transition: color 0.1s ease 0s;
 		@include adaptiv-value("max-width", 520, 300, 0);
 		@include adaptiv-value("margin-bottom", 40, 24, 0);
 	}
@@ -41,7 +41,7 @@ html.dark .hero {
 
 	&__form {
 		display: flex;
-		max-width: em(403px);
+		max-width: rem(403px);
 		border-radius: $defautBorderRadius;
 		overflow: hidden;
 		background: var(--base-color);
@@ -49,7 +49,7 @@ html.dark .hero {
 
 	&__input {
 		flex: 1 1 auto;
-		padding: em(20px);
+		padding: rem(20px);
 		font-weight: 700;
 		font-size: 14px;
 		line-height: 1.43em;
@@ -62,6 +62,8 @@ html.dark .hero {
 	&__submit {
 		@include adaptiv-value("padding-top", 20, 15, 0);
 		@include adaptiv-value("padding-bottom", 20, 15, 0);
+		@include adaptiv-value("padding-left", 35, 25, 0);
+		@include adaptiv-value("padding-right", 35, 25, 0);
 		border-radius: 0;
 	}
 }
@@ -77,7 +79,7 @@ html.dark .hero {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	row-gap: em(45px);
+	row-gap: rem(45px);
 	> :not(:last-child) {
 		@include adaptiv-value("padding-right", 45, 25, 1);
 	}
@@ -92,41 +94,41 @@ html.dark .features {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex: 1 1 em(356px);
+	flex: 1 1 rem(356px);
 	&__img {
 		max-width: 100%;
 		img {
 			object-fit: cover;
-			height: em(45px);
-			width: em(58px);
+			height: rem(45px);
+			width: rem(58px);
 		}
 	}
 
 	&__content {
 		> :not(:last-child) {
-			margin-bottom: em(7px);
+			margin-bottom: rem(7px);
 		}
 	}
 
 	&__title {
-		font-size: 16px;
-		line-height: 1.5em;
+		font-size: rem(16px);
+		line-height: em(24px, 16px);
 	}
 
 	&__desc {
 		font-size: 14px;
-		line-height: 1.4em;
+		line-height: em(20px, 14px);
 	}
 }
 
 // Why
 .why {
-	padding: em(100px) 0 em(120px) 0;
-	font-size: em(18px);
-	letter-spacing: em(0.02px, 18px);
+	padding: rem(100px) 0 rem(120px) 0;
+	font-size: rem(18px);
+	letter-spacing: rem(0.02px);
 	&__container {
 		max-width: calc(#{$maxWidthContainer}px);
-		padding: 0 em(60px, 18px);
+		padding: 0 rem(60px);
 	}
 
 	&__body {
@@ -142,23 +144,23 @@ html.dark .features {
 	}
 
 	&__subtitle {
-		font-size: em(13px);
+		font-size: rem(13px);
 		line-height: 1.54em;
-		letter-spacing: em(0.05px, 13px);
+		letter-spacing: rem(0.05px);
 		text-transform: uppercase;
-		margin-bottom: em(20px);
+		margin-bottom: rem(20px);
 		color: var(--accent-color);
 	}
 
 	&__title {
-		font-size: em(36px, 18px);
-		max-width: em(480px, 36px);
-		margin-bottom: em(34px);
+		font-size: rem(36px);
+		max-width: rem(480px);
+		margin-bottom: rem(34px);
 		letter-spacing: normal;
 	}
 
 	&__text {
-		margin-bottom: em(26px);
+		margin-bottom: rem(26px);
 		line-height: 1.67em;
 		color: var(--gray-color);
 	}
@@ -166,7 +168,7 @@ html.dark .features {
 		position: relative;
 		display: flex;
 		text-align: center;
-		max-width: em(108px, 18px);
+		max-width: rem(108px);
 		font-weight: 700;
 		line-height: 1em;
 		@extend %underline;

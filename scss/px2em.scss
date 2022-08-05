@@ -1,12 +1,23 @@
 @use "sass:math";
 
-@function em($px, $base-font-size: 14px) {
+@function rem($px) {
 	@if unitless($px) {
 		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-		@return em($px * 1px, "em", $base-font-size);
+		@return rem($px * 1px, "rem", $base-font-size);
+	} @else if unit($px) == rem {
+		@return $px;
+	}
+	$test: #{math.div($px, $base-font-size) * 1rem};
+	@return $test;
+}
+
+@function em($px, $font-size: 14px) {
+	@if unitless($px) {
+		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+		@return em($px * 1px, "em", $font-size);
 	} @else if unit($px) == em {
 		@return $px;
 	}
-	$test: #{math.div($px, $base-font-size) + "em"};
+	$test: #{math.div($px, $font-size) * 1em};
 	@return $test;
 }

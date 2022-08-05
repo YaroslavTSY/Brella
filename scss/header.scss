@@ -5,7 +5,7 @@
 	display: flex;
 	width: 100%;
 	@include adaptiv-value("height", 90, 60, 0);
-	padding: em(25px) 0;
+	padding: rem(25px) 0;
 	background-color: var(--base-color);
 	color: var(--main-color);
 	&__container-big {
@@ -51,7 +51,7 @@
 	&-link {
 		display: table;
 		&.icon-logo {
-			font-size: em(75px, 14px);
+			font-size: rem(75px);
 		}
 	}
 	&__dark {
@@ -84,11 +84,11 @@
 			@extend %underline;
 		}
 		z-index: 2;
-		@media (min-width: em(992px)) {
+		@media (min-width: rem(992px)) {
 			display: flex;
 			align-items: center;
 			> li {
-				padding: em(10px) 0;
+				padding: rem(10px) 0;
 			}
 		}
 	}
@@ -106,7 +106,7 @@
 		bottom: 0;
 		left: 0;
 		background-color: var(--accent-color);
-		height: em(1.5px);
+		height: rem(1.5px);
 		transition: all 0.3s ease 0s;
 		border-radius: 0.3em;
 		will-change: transform;
@@ -145,8 +145,8 @@
 		padding: 3.5px;
 		transition: all 0.3s ease 0s;
 		transform: rotate(45deg);
-		margin-left: em(10px);
-		margin-top: em(-5px);
+		margin-left: rem(10px);
+		margin-top: rem(-5px);
 	}
 	&-list {
 		display: flex;
@@ -166,7 +166,7 @@
 			justify-content: center;
 			flex: 1 1 auto;
 			& a::before {
-				margin-right: em(15px);
+				margin-right: rem(15px);
 			}
 		}
 		a {
@@ -178,12 +178,12 @@
 body._pc .login:hover {
 	&::after {
 		transform: rotate(-135deg);
-		margin-top: em(5px);
+		margin-top: rem(5px);
 	}
 
 	.login-list {
 		@extend %visible;
-		@media (max-width: em(991px)) {
+		@media (max-width: rem(991px)) {
 			transform: translate(50%, 0);
 		}
 	}
