@@ -1,28 +1,35 @@
 //* Mobile-first
-@media (min-width: em(1400px)) {
+@media (min-width: em(1400px, 16px)) {
 }
-@media (min-width: em(1200px)) {
+@media (min-width: em(1200px, 16px)) {
 }
-@media (min-width: em(992px)) {
+@media (min-width: em(992px, 16px)) {
+	.menu__list {
+		display: flex;
+		align-items: center;
+		> li {
+			padding: rem(10px) 0;
+		}
+	}
 	.login-list {
 		flex-direction: column;
 		min-width: 100px;
 		min-height: 150px;
 	}
 }
-@media (min-width: em(768px)) {
+@media (min-width: em(768px, 16px)) {
 	.block-features__img {
 		margin-right: em(10px);
 	}
 }
-@media (min-width: em(576px)) {
+@media (min-width: em(576px, 16px)) {
 }
 //* Desktop-first
-@media (max-width: em(1399px)) {
+@media (max-width: em(1399px, 16px)) {
 }
-@media (max-width: em(1199px)) {
+@media (max-width: em(1199px, 16px)) {
 }
-@media (max-width: em(991px)) {
+@media (max-width: em(991px, 16px)) {
 	.menu {
 		margin-right: 0;
 	}
@@ -163,7 +170,7 @@
 		}
 	}
 }
-@media (max-width: em(767px)) {
+@media (max-width: em(767px, 16px)) {
 	.hero {
 		background-position: 40%, 50%;
 	}
@@ -176,7 +183,7 @@
 		flex: 1 1 auto;
 	}
 }
-@media (max-width: em(575px)) {
+@media (max-width: em(575px, 16px)) {
 	.hero {
 		background: linear-gradient(
 					135deg,

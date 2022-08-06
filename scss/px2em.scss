@@ -11,7 +11,7 @@
 	@return $test;
 }
 
-@function em($px, $font-size: 16px) {
+@function em($px, $font-size: 14px) {
 	@if unitless($px) {
 		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
 		@return em($px * 1px, "em", $font-size);

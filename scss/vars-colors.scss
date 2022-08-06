@@ -1,21 +1,23 @@
 html {
-	--orange-color: #f0a446;
-	--gray-color: #757575;
 	.wrapper {
 		transition: color 0.3s ease 0s;
 	}
 	&.light {
 		--main-color: #214e41;
 		--icon-color: var(--main-color);
-		--base-color: #ffffff;
+		--base-color: #fafafa;
 		--accent-color: #43806c;
 		--light-color: #e3eeed;
+		--gray-color: #757575;
+		--orange-color: #f0a446;
 	}
 	&.dark {
-		--main-color: rgb(114, 194, 181);
+		--main-color: #7cdfc3;
 		--icon-color: var(--main-color);
-		--base-color: rgba(43, 43, 43, 1);
-		--accent-color: rgb(131, 231, 193);
-		--light-color: rgba(73, 77, 77, 1);
+		--base-color: #2e2d2e;
+		--accent-color: #36cb9a;
+		--light-color: #2d312f;
+		--gray-color: #aebfb9;
+		--orange-color: #ffb356;
 	}
 }
