@@ -84,9 +84,9 @@
 						<div class="why__stats stats">
 							<div class="stats__body">
 								<div class="stats__content">
-									<p class="stats__number">
-										60%
-									</p>
+									<div class="stats__number">
+										<span data-digits-counter>60</span> %
+									</div>
 									<div class="stats-pointer"></div>
 									<p class="stats__text">
 										of Americans <span>would have to borrow</span> <br> to cover an unexpected $1000 expense
@@ -94,39 +94,51 @@
 								</div>
 								<div class="stats__columns column">
 									<div class="column__item column__deductible deductible"">
-										<p class=" column__absolute column__price">
-										$1,644
-										</p>
-										<div class="column__value deductible__value">
-											<div></div>
-										</div>
-										<p class="column__absolute column__desc">
-											Deductible
-										</p>
+										<div class=" column__absolute column__price">
+										$ <span data-digits-counter>1644</span>
 									</div>
-									<div class="stats-pointer__column"></div>
-									<div class="column__item column__annual-max annual-max">
-										<p class="column__absolute column__price">
-											$4,039
-										</p>
-										<div class="column__value annual-max__value">
-											<div></div>
+									<div class="column__value deductible__value">
+										<div>
+											<!-- ! -->
 										</div>
-										<p class="column__absolute column__desc">
-											Annual Max
-										</p>
 									</div>
+									<p class="column__absolute column__desc">
+										Deductible
+									</p>
+								</div>
+
+
+								<!-- ? 1. Add animation @keyframes from 0 height to (need height)
+									? 2. Add special class for column elements, need to animate
+									? 3. Add code who checked status of scroll to this element (Add class on scroll)   -->
+
+
+
+								<div class="stats-pointer__column"></div>
+								<div class="column__item column__annual-max annual-max">
+									<div class="column__absolute column__price">
+										$ <span data-digits-counter>4039</span>
+									</div>
+									<div class="column__value annual-max__value">
+										<div>
+											<!-- ! -->
+										</div>
+									</div>
+									<p class="column__absolute column__desc">
+										Annual Max
+									</p>
 								</div>
 							</div>
-							<p class="stats__desc">
-								2020 individual averages (Source: KFF)
-							</p>
 						</div>
+						<p class="stats__desc">
+							2020 individual averages (Source: KFF)
+						</p>
 					</div>
 				</div>
-			</section>
-		</main>
-		@@include('html/footer.html',{})
+	</div>
+	</section>
+	</main>
+	@@include('html/footer.html',{})
 	</div>
 	<script src="js/app.min.js"></script>
 </body>
