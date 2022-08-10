@@ -15,7 +15,7 @@
 
 	&__offer {
 		@include adaptiv-value("padding-top", 160, 80, 1);
-		@include adaptiv-value("padding-bottom", 280, 320, 1);
+		@include adaptiv-value("padding-bottom", 280, 420, 1);
 	}
 
 	&__features {
@@ -29,14 +29,14 @@ html.dark .hero {
 	&__title {
 		transition: color 0.1s ease 0s;
 		@include adaptiv-value("max-width", 520, 300, 0);
-		@include adaptiv-value("margin-bottom", 40, 24, 0);
+		@include adaptiv-value("margin-bottom", 40, 20, 0);
 	}
 
 	&__text {
+		color: var(--main-color);
 		font-weight: 700;
-		font-size: 16px;
 		line-height: 1.5em;
-		@include adaptiv-value("margin-bottom", 16, 12, 0);
+		@include adaptiv-value("margin-bottom", 16, 20, 0);
 	}
 
 	&__form {
@@ -73,7 +73,7 @@ html.dark .hero {
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	left: 15px;
 	right: 15px;
-	@include adaptiv-value("bottom", -76, -250, 1);
+	@include adaptiv-value("bottom", -76, -300, 1);
 	@include adaptiv-value("padding", 40, 15, 0);
 	display: flex;
 	flex-wrap: wrap;
@@ -123,8 +123,9 @@ html.dark .features {
 
 // Why
 .why {
-	padding: rem(100px) 0 rem(120px) 0;
-	font-size: rem(18px);
+	padding: rem(100px) 0 rem(60px) 0;
+	@include adaptiv-value("padding-top", 100, 0, 0);
+	@include adaptiv-value("font-size", 18, 16, 0);
 	letter-spacing: rem(0.02px);
 	&__container {
 		max-width: calc(#{$maxWidthContainer}px);
@@ -146,25 +147,16 @@ html.dark .features {
 	}
 
 	&__subtitle {
-		font-size: rem(13px);
-		line-height: 1.54em;
-		letter-spacing: rem(0.05px);
-		text-transform: uppercase;
-		margin-bottom: rem(20px);
-		color: var(--accent-color);
+		font-weight: 400;
 	}
 
 	&__title {
-		font-size: rem(36px);
 		max-width: rem(480px);
 		margin-bottom: rem(34px);
-		letter-spacing: normal;
 	}
 
 	&__text {
 		margin-bottom: rem(26px);
-		line-height: 1.67em;
-		color: var(--gray-color);
 		max-width: rem(670px);
 	}
 	&__more {
@@ -182,8 +174,6 @@ html.dark .features {
 		}
 	}
 }
-.title {
-}
 .stats {
 	&__body {
 		position: relative;
@@ -196,20 +186,27 @@ html.dark .features {
 
 	&-pointer {
 		position: relative;
-		width: 1000%;
+		width: 0px;
 		height: 2px;
 		background-color: var(--orange-color);
 		margin-top: rem(10px);
 		margin-bottom: rem(18px);
 		z-index: 1;
+		transition: all 1.5s ease 0.3s;
+		&._active {
+			width: 250%;
+		}
 		&__column {
 			@extend .stats-pointer;
 			display: none;
-			width: 100%;
+			width: 0%;
 			padding: 0;
 			height: 2px;
 			bottom: 130px;
 			position: absolute;
+			&._active {
+				width: 100%;
+			}
 		}
 	}
 
@@ -240,6 +237,7 @@ html.dark .features {
 
 	&__columns {
 		flex: 1 1 46.07%;
+		min-height: rem(364px);
 	}
 
 	&__desc {
@@ -270,26 +268,208 @@ html.dark .features {
 	}
 	&__value {
 		> div {
+			transition: all cubic-bezier(0.3, 0, 0.15, 1) 2s;
 			background-color: var(--accent-color);
 			width: rem(78px);
+			transform: scale(0.6, 1);
+			height: 0;
 		}
 	}
 	&__desc {
 		bottom: 0;
 	}
 }
-
 .deductible {
 	&__value {
-		> div {
-			height: rem(150px);
+		&._active {
+			> div {
+				transform: scale(1);
+				height: rem(150px);
+			}
 		}
 	}
 }
 .annual-max {
 	&__value {
-		> div {
-			height: rem(300px);
+		&._active {
+			> div {
+				transform: scale(1);
+				height: rem(300px);
+			}
 		}
+	}
+}
+
+//* Brings section
+
+.brings {
+	&__wrapper {
+		position: relative;
+	}
+	&__container {
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		color: var(--main);
+		position: absolute;
+		@include adaptiv-value("top", 90, 30, 0);
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("gap", 200, -150, 1);
+	}
+}
+.brings-block {
+	&__1 {
+		flex: 1;
+	}
+
+	&__2 {
+		flex: 1;
+	}
+}
+.brings-bg {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	&__1 {
+		left: 0;
+		background-color: var(--accent-blue);
+	}
+
+	&__2 {
+		right: 0;
+		background-color: var(--main-color);
+	}
+}
+html.dark .brings-bg__2 {
+	background-color: var(--accent-color);
+}
+.brings-content {
+	// padding: rem(130px) 0 rem(130px) 0;
+	@include adaptiv-value("padding-top", 130, 60, 0);
+	@include adaptiv-value("padding-bottom", 130, 60, 0);
+	&__1 {
+	}
+
+	&__2 {
+	}
+}
+.brings-text {
+	&__1 {
+		font-family: "Roboto", sans-serif;
+		font-weight: 400;
+		// font-size: rem(32px);
+		@include adaptiv-value("font-size", 32, 24, 1);
+		line-height: 1.31em;
+		color: var(--accent-color);
+		span {
+			color: var(--main-color);
+			position: relative;
+			&::before {
+				transition: all 0.3s ease 0s;
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+				right: rem(-65px);
+				@include adaptiv-value("right", -65, -22.5, 1);
+				@include adaptiv-value("font-size", 24, 18, 1);
+			}
+			&:hover {
+				&::before {
+					@include adaptiv-value("right", -75, -27.5, 1);
+					@include adaptiv-value("font-size", 24, 20, 1);
+				}
+			}
+		}
+		> :not(:last-child) {
+			margin-bottom: rem(18px);
+		}
+	}
+
+	&__2 {
+		font-size: rem(20px);
+		line-height: 1.7em;
+		letter-spacing: em(0.02px, 20px);
+		color: var(--base-color);
+		> :not(:last-child) {
+			margin-bottom: rem(34px);
+		}
+	}
+}
+
+//* Plan section
+.plan {
+	&__container {
+	}
+
+	&__body {
+		> :not(:last-child) {
+			margin-bottom: rem(60px);
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: rem(84px);
+	}
+
+	&__info {
+		flex: 1;
+	}
+
+	&__subtitle {
+	}
+
+	&__title {
+		margin-bottom: rem(34px);
+	}
+
+	&__text {
+	}
+
+	&__img {
+		flex: 1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+	&__numbers {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: rem(50px);
+	}
+
+	&__block {
+		flex: 1;
+		> :not(:last-child) {
+			margin-bottom: rem(13px);
+		}
+	}
+
+	&__number {
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		font-size: rem(60px);
+		line-height: em(78px, 60px);
+		color: var(--orange-color);
+	}
+
+	&__desc {
+		font-weight: 700;
+		font-size: rem(13px);
+		line-height: em(22px, 17px);
+		letter-spacing: em(0.02px, 17px);
 	}
 }

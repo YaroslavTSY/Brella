@@ -1,23 +1,25 @@
 @use "sass:math";
 
-@function rem($px) {
+$unrounded: 10000;
+
+@function rem($px, $round: 100) {
 	@if unitless($px) {
 		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
 		@return rem($px * 1px, "rem", $base-font-size);
 	} @else if unit($px) == rem {
 		@return $px;
 	}
-	$test: #{math.div($px, $base-font-size) * 1rem};
+	$test: #{math.div((math.round(math.div($px, $base-font-size) * $round)), $round) * 1rem};
 	@return $test;
 }
 
-@function em($px, $font-size: 14px) {
+@function em($px, $font-size: 14px, $round: 100) {
 	@if unitless($px) {
 		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
 		@return em($px * 1px, "em", $font-size);
 	} @else if unit($px) == em {
 		@return $px;
 	}
-	$test: #{math.div($px, $font-size) * 1em};
+	$test: #{math.div((math.round(math.div($px, $font-size) * $round)), $round) * 1em};
 	@return $test;
 }

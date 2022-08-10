@@ -29,6 +29,13 @@ if (iconMenu) {
 	});
 }
 
+if (functions.animItems.length > 0) {
+	window.addEventListener('scroll', functions.animOnScroll)
+	functions.offset
+	setTimeout(() => {
+		functions.animOnScroll
+	}, 300);
+}
 // let nav = document.getElementById("nav");
 // let pointer = document.getElementById("pointer");
 // let links = document.getElementsByClassName("menu__link");

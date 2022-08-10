@@ -179,9 +179,6 @@ body._pc .login:hover {
 
 	.login-list {
 		@extend %visible;
-		@media (max-width: em(991px)) {
-			transform: translate(50%, 0);
-		}
 	}
 }
 

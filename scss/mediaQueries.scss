@@ -144,10 +144,17 @@
 			top: 100%;
 			right: 50%;
 			gap: em(20px);
+			transform: translate(50%, -10%);
 			li {
 				padding: em(15px);
 				font-size: em(18px);
 			}
+		}
+	}
+	.login._active,
+	body._pc .login:hover {
+		.login-list {
+			transform: translate(50%, 0);
 		}
 	}
 	.why {
@@ -165,9 +172,14 @@
 		}
 	}
 	.stats {
+		@include adaptiv-value("padding-top", 50, 0, 0);
 		&__body {
+			gap: rem(30px);
 			margin: 0 auto;
 		}
+	}
+	.plan__block {
+		flex: 0 1 rem(248.75px);
 	}
 }
 @media (max-width: em(767px, 16px)) {
@@ -181,6 +193,39 @@
 	.block-features {
 		flex-direction: column;
 		flex: 1 1 auto;
+	}
+	.brings {
+		&__body {
+			flex-direction: column;
+			text-align: center;
+		}
+		&-bg {
+			width: 100%;
+			height: 50%;
+			&__2 {
+				top: auto;
+				bottom: 0;
+			}
+		}
+		&__subtitle {
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+	.plan {
+		&__content {
+			flex-direction: column;
+		}
+		&__img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+			}
+		}
 	}
 }
 @media (max-width: em(575px, 16px)) {
@@ -215,5 +260,14 @@
 		&__number {
 			margin-right: -10%;
 		}
+	}
+	.plan__numbers {
+		text-align: center;
+	}
+}
+@media (max-width: em(420px, 16px)) {
+	.brings-content {
+		padding-top: rem(80px);
+		padding-bottom: rem(10px);
 	}
 }
