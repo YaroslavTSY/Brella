@@ -76,7 +76,7 @@ section {
 		transform: translate(-50%, 0);
 		content: " ";
 		position: absolute;
-		bottom: 1px;
+		bottom: 0;
 		width: 0%;
 		height: 2px;
 		background-color: var(--main-color);
@@ -106,6 +106,15 @@ section {
 	}
 }
 
+.subtitle {
+	font-size: rem(13px);
+	font-weight: 700;
+	line-height: 1.54em;
+	letter-spacing: em(0.05px, 13px, 1000);
+	text-transform: uppercase;
+	color: var(--accent-color);
+}
+
 .title {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
@@ -114,19 +123,31 @@ section {
 	line-height: 1.28em;
 }
 
-.subtitle {
-	font-size: rem(13px);
-	font-weight: 700;
-	line-height: 1.54em;
-	letter-spacing: em(0.05px, 13px, 1000);
-	text-transform: uppercase;
-	margin-bottom: rem(20px);
-	color: var(--accent-color);
-}
-
 .text {
 	// font-size: rem(18px);
 	@include adaptiv-value("font-size", 18, 16, 0);
 	line-height: 1.67em;
 	color: var(--gray-color);
+}
+
+.content__more {
+	position: relative;
+	display: inline-block;
+	font-size: rem(18px);
+	font-weight: 700;
+	line-height: 1em;
+	padding-bottom: rem(15px);
+	@extend %underline;
+}
+
+.type-block {
+	.subtitle {
+		margin-bottom: rem(20px);
+	}
+	.title {
+		margin-bottom: rem(34px);
+	}
+	.text {
+		margin-bottom: rem(24px);
+	}
 }
