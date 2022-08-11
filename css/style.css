@@ -405,8 +405,8 @@ section {
   padding: 4.29rem 0;
 }
 
-.why__more::after,
-.menu__list li::after {
+.menu__list li::after,
+.content__more::after {
   -webkit-transition: width 0.3s ease 0s;
   -o-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
@@ -416,14 +416,14 @@ section {
           transform: translate(-50%, 0);
   content: " ";
   position: absolute;
-  bottom: 1px;
+  bottom: 0;
   width: 0%;
   height: 2px;
   background-color: var(--main-color);
 }
 
-.why__more:hover::after,
-.menu__list li:hover::after {
+.menu__list li:hover::after,
+.content__more:hover::after {
   width: 100%;
 }
 
@@ -452,6 +452,15 @@ section {
           filter: drop-shadow(0px 1px 3px var(--main-color));
 }
 
+.subtitle {
+  font-size: 0.93rem;
+  font-weight: 700;
+  line-height: 1.54em;
+  letter-spacing: 0.004em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
 .title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -459,20 +468,31 @@ section {
   line-height: 1.28em;
 }
 
-.subtitle {
-  font-size: 0.93rem;
-  font-weight: 700;
-  line-height: 1.54em;
-  letter-spacing: 0.004em;
-  text-transform: uppercase;
-  margin-bottom: 1.43rem;
-  color: var(--accent-color);
-}
-
 .text {
   font-size: calc(16px + 2 * ((100vw - 320px) / 1120));
   line-height: 1.67em;
   color: var(--gray-color);
+}
+
+.content__more {
+  position: relative;
+  display: inline-block;
+  font-size: 1.29rem;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 1.07rem;
+}
+
+.type-block .subtitle {
+  margin-bottom: 1.43rem;
+}
+
+.type-block .title {
+  margin-bottom: 2.43rem;
+}
+
+.type-block .text {
+  margin-bottom: 1.71rem;
 }
 
 .header {
@@ -933,23 +953,19 @@ html.dark .features {
 
 .why__title {
   max-width: 34.29rem;
-  margin-bottom: 2.43rem;
 }
 
 .why__text {
-  margin-bottom: 1.86rem;
   max-width: 47.86rem;
 }
 
 .why__more {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
   max-width: 7.71rem;
-  font-weight: 700;
-  line-height: 1em;
+  padding-bottom: 0.07rem;
 }
 
 .why__stats img {
@@ -1234,10 +1250,6 @@ html.dark .brings-bg__2 {
           flex: 1;
 }
 
-.plan__title {
-  margin-bottom: 2.43rem;
-}
-
 .plan__img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1289,9 +1301,77 @@ html.dark .brings-bg__2 {
   letter-spacing: 0em;
 }
 
+.exp {
+  padding-bottom: 0;
+}
+
+.exp__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.exp__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.exp__img img {
+  border-radius: 41px 41px 0 0;
+  width: 100%;
+  height: 35.71rem;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 75vh;
+}
+
+.exp__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 57.16%;
+          flex: 0 1 57.16%;
+}
+
+.exp__content * {
+  max-width: 38rem;
+}
+
+.no-webp .employers {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), color-stop(40%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0))), url(../img/employers.jpg) 50% 0/cover no-repeat;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%), url(../img/employers.jpg) 50% 0/cover no-repeat;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%), url(../img/employers.jpg) 50% 0/cover no-repeat; }
+
+.employers {
+  padding: 9rem 0 8.14rem 0;
+}
+
+.employers__content {
+  max-width: 50%;
+}
+
+html.no-webp.dark .employers {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0))), url(../img/employers.jpg);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%), url(../img/employers.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%), url(../img/employers.jpg); }
+
 @media (min-width: 48em) {
   .block-features__img {
     margin-right: 0.71em;
+  }
+
+  .exp__content * {
+    margin-left: auto;
+    margin-right: 1.43rem;
+  }
+
+  .employers__content {
+    padding-right: 120px;
   }
 }
 
@@ -1390,6 +1470,10 @@ html.dark .brings-bg__2 {
 
   .brings-text__1 span:hover::before {
     font-size: calc(20px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .exp__body {
+    gap: calc(80px + -60 * ((100vw - 320px) / 880));
   }
 }
 
@@ -1563,14 +1647,6 @@ html.dark .brings-bg__2 {
             transform: translate(50%, 0);
   }
 
-  .why__body {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-        grid-template-areas: "." ".";
-  }
-
   .why__content {
     text-align: center;
     display: -webkit-box;
@@ -1583,8 +1659,14 @@ html.dark .brings-bg__2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+  }
+
+  .why__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+        grid-template-areas: "." ".";
   }
 
   .stats {
@@ -1610,6 +1692,20 @@ html.dark .brings-bg__2 {
 }
 
 @media (max-width: 47.94em) {
+  .type-block {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
   .hero {
     background-position: 40%, 50%;
   }
@@ -1681,6 +1777,27 @@ html.dark .brings-bg__2 {
     height: auto;
     max-width: 100%;
   }
+
+  .exp__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .no-webp .employers {
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(255, 255, 255, 0.9)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(90%, rgba(255, 255, 255, 0.7))), url(../img/employers.jpg) 40% 100%/cover no-repeat;
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.7) 90%), url(../img/employers.jpg) 40% 100%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.7) 90%), url(../img/employers.jpg) 40% 100%/cover no-repeat; }
+
+  .employers__content {
+    max-width: 70%;
+  }
+
+  html.no-webp.dark .employers {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(90%, rgba(0, 0, 0, 0.7))), url(../img/employers.jpg);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.jpg);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.jpg); }
 }
 
 @media (max-width: 35.94em) {
@@ -1726,6 +1843,20 @@ html.dark .brings-bg__2 {
   .plan__numbers {
     text-align: center;
   }
+
+  .no-webp .employers {
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(255, 255, 255, 0.9)), color-stop(50%, rgba(255, 255, 255, 0.85)), color-stop(90%, rgba(255, 255, 255, 0.9))), url(../img/employers.jpg) 60% 100%/cover no-repeat;
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 90%), url(../img/employers.jpg) 60% 100%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 90%), url(../img/employers.jpg) 60% 100%/cover no-repeat; }
+
+  .employers__content {
+    max-width: 100%;
+  }
+
+  html.no-webp.dark .employers {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.85)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(90%, rgba(0, 0, 0, 0.85))), url(../img/employers.jpg);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%), url(../img/employers.jpg);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%), url(../img/employers.jpg); }
 }
 
 @media (max-width: 26.25em) {
@@ -1735,11 +1866,41 @@ html.dark .brings-bg__2 {
   }
 }
 
+@media (min-width: 48em) and (max-width: 1200px) {
+  .employers__content {
+    padding-right: calc(0px + 120 * ((100vw - 320px) / 880));
+  }
+}
+
 .webp .hero { background: url(../img/hero-bg.webp) 50% 50%/cover no-repeat; }
 
 html.webp.dark .hero { background: -webkit-gradient(linear, left top, right top, color-stop(-75%, rgb(0, 0, 0)), color-stop(35%, rgba(0, 0, 0, 0.5)), color-stop(80%, rgba(0, 0, 0, 0.3))), url(../img/hero-bg.webp) 50% 50%/cover no-repeat; background: -o-linear-gradient(left, rgb(0, 0, 0) -75%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.3) 80%), url(../img/hero-bg.webp) 50% 50%/cover no-repeat; background: linear-gradient(90deg, rgb(0, 0, 0) -75%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.3) 80%), url(../img/hero-bg.webp) 50% 50%/cover no-repeat; }
 
+.webp .employers { background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), color-stop(40%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0))), url(../img/employers.webp) 50% 0/cover no-repeat; background: -o-linear-gradient(left, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%), url(../img/employers.webp) 50% 0/cover no-repeat; background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%), url(../img/employers.webp) 50% 0/cover no-repeat; }
+
+html.webp.dark .employers { background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), color-stop(60%, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0))), url(../img/employers.webp); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%), url(../img/employers.webp); background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%), url(../img/employers.webp); }
+
+@media (max-width: 47.94em) {
+
+  .webp .employers { background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(255, 255, 255, 0.9)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(90%, rgba(255, 255, 255, 0.7))), url(../img/employers.webp) 40% 100%/cover no-repeat; background: -o-linear-gradient(left, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.7) 90%), url(../img/employers.webp) 40% 100%/cover no-repeat; background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.7) 90%), url(../img/employers.webp) 40% 100%/cover no-repeat; }
+}
+
+@media (max-width: 47.94em) {
+
+  html.webp.dark .employers { background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(90%, rgba(0, 0, 0, 0.7))), url(../img/employers.webp); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.webp); background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.webp); }
+}
+
 @media (max-width: 35.94em) {
 
   .webp .hero { background: -o-linear-gradient(315deg, rgb(255, 255, 255) -75%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 0) 80%) 80%, url(../img/hero-bg.webp) 60% 50%/cover no-repeat; background: linear-gradient(135deg, rgb(255, 255, 255) -75%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 0) 80%) 80%, url(../img/hero-bg.webp) 60% 50%/cover no-repeat; }
+}
+
+@media (max-width: 35.94em) {
+
+  .webp .employers { background: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(255, 255, 255, 0.9)), color-stop(50%, rgba(255, 255, 255, 0.85)), color-stop(90%, rgba(255, 255, 255, 0.9))), url(../img/employers.webp) 60% 100%/cover no-repeat; background: -o-linear-gradient(left, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 90%), url(../img/employers.webp) 60% 100%/cover no-repeat; background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.9) 90%), url(../img/employers.webp) 60% 100%/cover no-repeat; }
+}
+
+@media (max-width: 35.94em) {
+
+  html.webp.dark .employers { background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.85)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(90%, rgba(0, 0, 0, 0.85))), url(../img/employers.webp); background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%), url(../img/employers.webp); background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%), url(../img/employers.webp); }
 }
