@@ -1,3 +1,4 @@
+import Swiper, { Navigation } from 'swiper';
 import * as functions from "./modules/functions.js";
 
 functions.isWebp();
@@ -36,6 +37,56 @@ if (functions.animItems.length > 0) {
 		functions.animOnScroll
 	}, 300);
 }
+window.onload = function () {
+	const swiperSponsor = new Swiper('.swiper', {
+		// configure Swiper to use modules
+		modules: [Navigation],
+		loop: true,
+		navigation: {
+			enabled: true,
+			nextEl: '.sponsor__button-next',
+			prevEl: '.sponsor__button-prev',
+		},
+		breakpoints: {
+			1200: {
+				slidesPerView: 5,
+				navigation: {
+					enabled: true,
+				}
+			},
+			992: {
+				slidesPerView: 4,
+				navigation: {
+					enabled: true,
+				}
+			},
+			768: {
+				slidesPerView: 3,
+				navigation: {
+					enabled: true,
+				}
+			},
+			576: {
+				slidesPerView: 2,
+				navigation: {
+					enabled: true,
+				}
+			},
+			0: {
+				enabled: true,
+				slidesPerView: 1,
+				loop: true,
+				autoHeight: true,
+				navigation: {
+					enabled: true,
+					nextEl: '.sponsor__button-next',
+					prevEl: '.sponsor__button-prev',
+				},
+			}
+		}
+	});
+}
+
 // let nav = document.getElementById("nav");
 // let pointer = document.getElementById("pointer");
 // let links = document.getElementsByClassName("menu__link");

@@ -3,7 +3,7 @@
 @@include('html/head.html',{ "title":"Brella" })
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="top">
 		@@include('html/header.html',{})
 		<main class="page page__index">
 			<section class="hero">
@@ -80,7 +80,7 @@
 								hardships don't become financial burdens.
 							</p>
 							<p>
-								<a href="##" class="content__more why__more">See our plan</a>
+								<a href="##" class="content__more underline why__more">See our plan</a>
 							</p>
 						</div>
 						<div class="why__stats stats">
@@ -96,7 +96,7 @@
 								</div>
 								<div class="stats__columns column">
 									<div class="column__item column__deductible deductible"">
-										<div class=" column__absolute column__price">
+												<div class=" column__absolute column__price">
 										$ <span data-digits-counter="700">1644</span>
 									</div>
 									<div class="column__value deductible__value _anim-item _anim-no-hide">
@@ -130,15 +130,15 @@
 				</div>
 	</div>
 	</section>
-	<section class="brings">
-		<div class="brings__wrapper">
-			<div class="brings__container">
-				<h3 class="subtitle brings__subtitle">
+	<section class="brings full-screen-section">
+		<div class="full-screen-section__wrapper brings__wrapper">
+			<div class="full-screen-section__container brings__container">
+				<h4 class="subtitle brings__subtitle">
 					brella brings
-				</h3>
-				<div class="brings__body">
-					<div class="brings-block brings-block__1">
-						<div class="brings-bg brings-bg__1">
+				</h4>
+				<div class="full-screen-section__body brings__body">
+					<div class="full-screen-section-block full-screen-section-block__1 brings-block brings-block__1">
+						<div class="full-screen-section-bg full-screen-section-bg__1 brings-bg brings-bg__1">
 						</div>
 						<div class="brings-content brings-content__1">
 							<div class="brings-text brings-text__1">
@@ -163,8 +163,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="brings-block brings-block__2">
-						<div class="brings-bg brings-bg__2">
+					<div class="full-screen-section-block full-screen-section-block__2 brings-block brings-block__2">
+						<div class="full-screen-section-bg full-screen-section-bg__2 brings-bg brings-bg__2">
 						</div>
 						<div class="brings-content brings-content__2">
 							<div class="brings-text brings-text__2">
@@ -186,7 +186,7 @@
 			<div class="plan__body">
 				<div class="plan__content">
 					<div class="type-block plan__info">
-						<h3 class="subtitle plan__subtitle">
+						<h4 class="subtitle plan__subtitle">
 							one plan, more coverage
 							</p>
 							<h2 class="title plan__title">
@@ -227,22 +227,23 @@
 		<div class="exp__container">
 			<div class="exp__body">
 				<div class="exp__img">
-					<img src="img/gif/phone.gif" alt="">
+					<img src="img/gifs/phone.gif" alt="">
 				</div>
 				<div class="type-block exp__content">
-					<h3 class="subtitle exp__subtitle">
+					<h4 class="subtitle exp__subtitle">
 						a better claims experience
-					</h3>
+					</h4>
 					<h2 class="title exp__title">
 						Give your people a plan that pays in hours—not weeks.
 					</h2>
 					<p class="text exp__text">
-						Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim sooner
+						Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim
+						sooner
 						and
 						get paid faster via our Member Portal or mobile app.
 					</p>
 					<p>
-						<a href="##" class="content__more exp__more">Play Video</a>
+						<a href="##" class="content__more underline exp__more">Play Video</a>
 					</p>
 				</div>
 			</div>
@@ -252,20 +253,125 @@
 		<div class="employers__container">
 			<div class="employers__body">
 				<div class="type-block employers__content">
-					<h3 class="subtitle employers__subtitle">
+					<h4 class="subtitle employers__subtitle">
 						for employers
-					</h3>
+					</h4>
 					<h2 class="title employers__title">
 						Easy enrollment meets simple administration.
 					</h2>
 					<p class="text employers__text">
-						Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or we’ll
+						Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or
+						we’ll
 						plug
 						into yours.
 					</p>
 					<p>
-						<a href="##" class="content__more employers__more">Learn more</a>
+						<a href="##" class="content__more underline employers__more">Learn more</a>
 					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="sponsor">
+		<div class="sponsor__container-big">
+			<div class="sponsor__container">
+				<h2 class="title sponsor__title">
+					Proudly backed by
+				</h2>
+			</div>
+			<div class="sponsor-slider__container">
+				<div class="sponsor__container-small">
+					<div class="swiper sponsor__slider">
+						<div class="swiper-wrapper sponsor__wrapper">
+							<div class="swiper-slide sponsor__slide">
+								<div class="sponsor__img">
+									<img class="svg-brewer-lane-dims" src="img/icons/icons.svg#brewer-lane" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide sponsor__slide">
+								<div class="sponsor__img">
+									<img class="svg-two-sigma-dims" src="img/icons/icons.svg#two-sigma" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide sponsor__slide">
+								<div class="sponsor__img">
+									<img class="svg-digitalis-dims" src="img/icons/icons.svg#digitalis" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide sponsor__slide">
+								<div class="sponsor__img">
+									<img class="svg-founder-dims" src="img/icons/icons.svg#founder" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide sponsor__slide">
+								<div class="sponsor__img">
+									<img class="svg-symphony-all-dims" src="img/icons/icons.svg#symphony-all" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev sponsor__button-prev icon-arrow-left"></div>
+						<div class="swiper-button-next sponsor__button-next icon-arrow-right"></div>
+					</div>
+				</div>
+			</div>
+			<hr class="sponsor__line">
+		</div>
+	</section>
+	<section class="posts">
+		<div class="posts__container">
+			<div class="posts__wrapper">
+				<a href="##" class="posts__post post">
+					<div class="post__img">
+						<img src="img/podcast.jpg" alt="">
+					</div>
+					<h4 class="subtitle post__subtitle">Podcast</h4>
+					<h3 class="title post__title">
+						Better Voluntary Benefits with NFP Voluntary Benefits Practice Leader, Kim Heald
+					</h3>
+				</a>
+				<a href="##" class="posts__post post">
+					<div class="post__img">
+						<img src="img/innovation.jpg" alt="">
+					</div>
+					<h4 class="subtitle post__subtitle">Insurance Innovation</h4>
+					<h3 class="title post__title">
+						How to Design Simpler Insurance Benefits
+					</h3>
+				</a>
+				<a href="##" class="posts__post post">
+					<div class="post__img">
+						<img src="img/strategy.jpg" alt="">
+					</div>
+					<h4 class="subtitle post__subtitle">Benefits Strategy</h4>
+					<h3 class="title post__title">
+						Executive Benefits Outlook with Dan Aceti
+					</h3>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="start full-screen-section">
+		<div class="full-screen-section__wrapper start__wrapper">
+			<div class="full-screen-section__container start__container">
+				<div class="full-screen-section__body start__body">
+					<div class="full-screen-section-block full-screen-section-block__1 start-block start-block__1">
+						<div class="full-screen-section-bg full-screen-section-bg__1 start-bg start-bg__1">
+							<img src="img/cta-bg.jpg" alt="">
+						</div>
+					</div>
+					<div class="full-screen-section-block full-screen-section-block__2 start-block start-block__2">
+						<div class="full-screen-section-bg full-screen-section-bg__2 start-bg start-bg__2">
+						</div>
+						<div class="full-screen-section__content start__content">
+							<h2 class="title start__title">
+								<p>Ready to explore Brella’s supplemental health solution?</p>
+								<p>Let’s talk.</p>
+							</h2>
+							<button class="btn btn__green start__btn">
+								Get in touch
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

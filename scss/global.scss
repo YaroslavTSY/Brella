@@ -69,7 +69,8 @@ section {
 	padding: rem(60px) 0;
 }
 
-%underline {
+.underline {
+	position: relative;
 	&::after {
 		transition: width 0.3s ease 0s;
 		left: 50%;
@@ -137,7 +138,6 @@ section {
 	font-weight: 700;
 	line-height: 1em;
 	padding-bottom: rem(15px);
-	@extend %underline;
 }
 
 .type-block {
@@ -150,4 +150,48 @@ section {
 	.text {
 		margin-bottom: rem(24px);
 	}
+}
+
+.full-screen-section {
+	&__wrapper {
+		position: relative;
+	}
+	&__container {
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-block {
+		&__1 {
+			flex: 1;
+		}
+		&__2 {
+			flex: 1;
+		}
+	}
+	&-bg {
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		&__1 {
+			left: 0;
+		}
+
+		&__2 {
+			right: 0;
+		}
+	}
+	&__content {
+	}
+}
+
+.addres__underwritten {
+}
+.addres__mail {
+}
+.phone {
 }
