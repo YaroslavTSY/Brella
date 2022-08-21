@@ -23,3 +23,10 @@ $unrounded: 10000;
 	$test: #{math.div((math.round(math.div($px, $font-size) * $round)), $round) * 1em};
 	@return $test;
 }
+
+@function get-vw($px-vw, $base-vw: 1440, $round: 10) {
+	@return #{math.div(math.round(math.div(($px-vw * 100), $base-vw) * $round), $round) * 1vw};
+}
+@function vw($base-unit, $min-unit, $min-unit-in-px: $min-unit * 1px) {
+	@return calc(rem($min-unit-in-px, 10) + get-vw($base-unit - $min-unit));
+}

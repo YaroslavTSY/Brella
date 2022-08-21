@@ -11,6 +11,10 @@ body {
 	&._lock {
 		overflow: hidden;
 	}
+	svg,
+	svg path {
+		transition: fill 0.3s ease 0s;
+	}
 }
 
 a {
@@ -25,11 +29,18 @@ button {
 	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
 	margin: 0 auto;
 	padding: 0px 15px;
+	@media (min-width: em(1920px, 16px)) {
+		max-width: calc(768px + #{$maxWidthContainer - 768} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
 }
 
 [class*="__container-big"] {
 	@extend [class*="__container"];
 	max-width: calc(1320px + 30px);
+
+	@media (min-width: em(1920px, 16px)) {
+		max-width: calc(768px + (1320 + 30 - 768) * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
 }
 
 %visible {
@@ -115,18 +126,19 @@ section {
 	text-transform: uppercase;
 	color: var(--accent-color);
 }
-
 .title {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
 	// font-size: rem(36px);
-	@include adaptiv-value("font-size", 36, 28, 0);
+	// @include adaptiv-value("font-size", 36, 28, 0);
+	font-size: vw(36, 28);
 	line-height: 1.28em;
 }
 
 .text {
 	// font-size: rem(18px);
-	@include adaptiv-value("font-size", 18, 16, 0);
+	// @include adaptiv-value("font-size", 18, 16, 0);
+	font-size: vw(18, 16);
 	line-height: 1.67em;
 	color: var(--gray-color);
 }

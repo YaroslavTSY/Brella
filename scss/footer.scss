@@ -1,5 +1,6 @@
 .footer {
-	padding: rem(100px) 0 rem(50px);
+	@include adaptiv-value("padding-top", 100, 50, 1);
+	@include adaptiv-value("padding-bottom", 50, 25, 1);
 	color: var(--base-color);
 	background-color: var(--main-color);
 	a,
@@ -27,6 +28,7 @@
 	&__content {
 		display: flex;
 		justify-content: space-between;
+		@include adaptiv-value("gap", 100, 50, 1);
 	}
 
 	&__menu {
@@ -45,11 +47,17 @@
 .footer-menu {
 	display: flex;
 	gap: rem(115px);
+	&__lists {
+		display: flex;
+		gap: rem(105px);
+	}
 	&__logo {
+		display: inline-flex;
+		justify-content: center;
 		transition: all 0.3s ease 0s;
 		font-size: rem(98px);
 		height: fit-content;
-		transform: translateY(-60px);
+		transform: translateY(rem(-34px));
 		&:hover {
 			filter: drop-shadow(0px 0px 10px var(--gray-color));
 		}
@@ -59,6 +67,7 @@
 		li {
 			font-size: rem(16px);
 			line-height: em(27px, 16px);
+			min-width: max-content;
 			&.footer-menu__title {
 				font-weight: 700;
 				font-size: rem(13px);
@@ -102,17 +111,25 @@
 		input,
 		input::placeholder {
 			color: var(--base-color);
+			font-size: rem(14px);
+			line-height: em(24px, 14px);
+			letter-spacing: em(0.02px, 14px);
 		}
 		button {
 			transition: all 0.3s ease 0s;
-			font-size: rem(19px);
 			width: rem(53px);
-			color: var(--icon-color);
 			background-color: var(--base-color);
+			svg,
+			svg path {
+				fill: var(--icon-color);
+			}
 			&:hover {
 				background-color: transparent;
-				color: var(--base-color);
-				filter: $dropShadow;
+				svg,
+				svg path {
+					fill: var(--base-color);
+				}
+				filter: drop-shadow(0px 1px 3px var(--base-color));
 			}
 		}
 		margin-bottom: rem(30px);
@@ -125,6 +142,10 @@
 	}
 	&__link {
 		transition: all 0.3s ease 0s;
+		svg,
+		svg path {
+			fill: var(--base-color);
+		}
 		&:hover {
 			filter: drop-shadow(0px 0px 10px var(--gray-color));
 		}
@@ -149,11 +170,14 @@
 .rights-footer {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: rem(15px);
 	&__links {
 		display: flex;
 	}
 
 	&__link {
+		font-weight: 700;
 		&-privacy {
 			padding-right: rem(10px);
 			border-right: 1px solid var(--base-color);
@@ -166,5 +190,53 @@
 				background-color: var(--base-color);
 			}
 		}
+	}
+}
+
+html.dark {
+	.footer {
+		color: var(--main-color);
+		background-color: var(--light-color);
+		a,
+		p,
+		button {
+			color: var(--main-color);
+		}
+		&-menu__block li:after {
+			background-color: var(--main-color);
+		}
+	}
+	.contact {
+		&__form {
+			border-color: var(--main-color);
+			button {
+				transition: all 0.3s ease 0s;
+				background-color: var(--accent-blue);
+				&:hover {
+					background-color: transparent;
+					svg,
+					svg path {
+						fill: var(--accent-color);
+					}
+					filter: drop-shadow(0px 1px 3px var(--accent-color));
+				}
+			}
+			input,
+			input::placeholder {
+				color: var(--main-color);
+			}
+		}
+		&__link {
+			svg,
+			svg path {
+				fill: var(--main-color);
+			}
+		}
+	}
+	.main-footer hr {
+		background-color: var(--main-color);
+	}
+	.rights-footer__link {
+		border-color: var(--main-color);
 	}
 }

@@ -190,6 +190,29 @@
 		flex: 0 1 rem(248.75px);
 	}
 }
+@media (max-width: em(860px, 16px)) {
+	.main-footer {
+		position: relative;
+		&__content {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__menu,
+		&__contact {
+			flex: 1;
+			text-align: center;
+		}
+	}
+	.footer-menu {
+		flex-direction: column;
+		gap: 0;
+		&__logo {
+		}
+	}
+	.contact__icons {
+		justify-content: center;
+	}
+}
 @media (max-width: em(767px, 16px)) {
 	.type-block {
 		text-align: center;
@@ -322,6 +345,11 @@
 	html.dark .employers {
 		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%),
 			url(../img/employers.jpg);
+	}
+	.rights-footer {
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
 	}
 }
 @media (max-width: em(420px, 16px)) {
