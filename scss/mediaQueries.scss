@@ -1,9 +1,9 @@
 //* Mobile-first
-@media (min-width: em(1400px, 16px)) {
+@media (min-width: em(1400px, $base-font-size)) {
 }
-@media (min-width: em(1200px, 16px)) {
+@media (min-width: em(1200px, $base-font-size)) {
 }
-@media (min-width: em(992px, 16px)) {
+@media (min-width: em(992px, $base-font-size)) {
 	.menu__list {
 		display: flex;
 		align-items: center;
@@ -17,7 +17,7 @@
 		min-height: 150px;
 	}
 }
-@media (min-width: em(768px, 16px)) {
+@media (min-width: em(768px, $base-font-size)) {
 	.block-features__img {
 		margin-right: em(10px);
 	}
@@ -31,14 +31,14 @@
 		@include adaptiv-value("padding-right", 120, 0, 1);
 	}
 }
-@media (min-width: em(576px, 16px)) {
+@media (min-width: em(576px, $base-font-size)) {
 }
 //* Desktop-first
-@media (max-width: em(1399px, 16px)) {
+@media (max-width: em(1399px, $base-font-size)) {
 }
-@media (max-width: em(1199px, 16px)) {
+@media (max-width: em(1199px, $base-font-size)) {
 }
-@media (max-width: em(991px, 16px)) {
+@media (max-width: em(991px, $base-font-size)) {
 	.menu {
 		margin-right: 0;
 	}
@@ -91,7 +91,7 @@
 	}
 	.header {
 		&__menu {
-			margin-bottom: em(20px);
+			margin-bottom: rem(20px);
 		}
 		&-btn__demo {
 			background-color: var(--main-color);
@@ -106,6 +106,7 @@
 			padding: em(100px) em(30px) em(30px) em(30px);
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 			background-color: var(--light-color);
 			transition: top 0.3s ease 0s;
 			&::before {
@@ -136,6 +137,7 @@
 			}
 			> :not(:last-child) {
 				margin-right: 0px;
+				margin-bottom: rem(15px);
 			}
 		}
 		&__link {
@@ -154,6 +156,7 @@
 			right: 50%;
 			gap: em(20px);
 			transform: translate(50%, -10%);
+			background: transparent;
 			li {
 				padding: em(15px);
 				font-size: em(18px);
@@ -190,7 +193,7 @@
 		flex: 0 1 rem(248.75px);
 	}
 }
-@media (max-width: em(860px, 16px)) {
+@media (max-width: em(860px, $base-font-size)) {
 	.main-footer {
 		position: relative;
 		&__content {
@@ -207,13 +210,14 @@
 		flex-direction: column;
 		gap: 0;
 		&__logo {
+			margin-bottom: rem(25px);
 		}
 	}
 	.contact__icons {
 		justify-content: center;
 	}
 }
-@media (max-width: em(767px, 16px)) {
+@media (max-width: em(767px, $base-font-size)) {
 	.type-block {
 		text-align: center;
 		display: flex;
@@ -294,7 +298,7 @@
 		justify-content: center;
 	}
 }
-@media (max-width: em(575px, 16px)) {
+@media (max-width: em(575px, $base-font-size)) {
 	.hero {
 		background: linear-gradient(
 					135deg,
@@ -352,7 +356,7 @@
 		text-align: center;
 	}
 }
-@media (max-width: em(420px, 16px)) {
+@media (max-width: em(420px, $base-font-size)) {
 	.brings-content {
 		padding-top: rem(80px);
 		padding-bottom: rem(10px);

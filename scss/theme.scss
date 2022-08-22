@@ -27,6 +27,8 @@ html {
 }
 .page__action {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 .page__reset {
 	opacity: 0;

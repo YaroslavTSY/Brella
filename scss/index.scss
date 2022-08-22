@@ -31,10 +31,6 @@ html.dark .hero {
 		transition: all 1s ease 0s;
 		@include adaptiv-value("max-width", 520, 300, 0);
 		@include adaptiv-value("margin-bottom", 40, 20, 0);
-		&._not-active {
-			transform: translateY(100%);
-			opacity: 0;
-		}
 	}
 
 	&__text {
@@ -43,10 +39,6 @@ html.dark .hero {
 		line-height: 1.5em;
 		@include adaptiv-value("margin-bottom", 16, 20, 0);
 		transition: all 1s ease 0.2s;
-		&._not-active {
-			transform: translateY(100%);
-			opacity: 0;
-		}
 	}
 
 	&__form {
@@ -56,17 +48,13 @@ html.dark .hero {
 		overflow: hidden;
 		background: var(--base-color);
 		transition: all 1s ease 0.4s;
-		&._not-active {
-			transform: translateY(100%);
-			opacity: 0;
-		}
 	}
 
 	&__input {
 		flex: 1 1 auto;
 		padding: rem(20px);
 		font-weight: 700;
-		font-size: 14px;
+		font-size: rem(14px, 1000);
 		line-height: 1.43em;
 		color: #222222;
 		&::placeholder {
@@ -86,8 +74,8 @@ html.dark .hero {
 	position: absolute;
 	transition: all 0.3s ease 0s;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-	left: 15px;
-	right: 15px;
+	left: rem(15px);
+	right: rem(15px);
 	@include adaptiv-value("bottom", -76, -300, 1);
 	@include adaptiv-value("padding", 40, 15, 0);
 	display: flex;
@@ -125,7 +113,7 @@ html.dark .features {
 	}
 
 	&__desc {
-		font-size: 14px;
+		font-size: rem(14px, 1000);
 		line-height: em(20px, 14px);
 	}
 }
@@ -137,10 +125,12 @@ html.dark .features {
 	@include adaptiv-value("font-size", 18, 16, 0);
 	letter-spacing: rem(0.02px);
 	&__container {
-		max-width: calc(#{$maxWidthContainer}px);
-		padding: 0 rem(60px);
+		@include adaptiv-value("max-width", $maxWidthContainer, $maxWidth, 1);
 		@include adaptiv-value("padding-right", 60, 15, 1);
 		@include adaptiv-value("padding-left", 60, 15, 1);
+		@media (min-width: 1920px) {
+			@include adaptiv-value("max-width", $maxWidth, $maxWidthContainer, 2);
+		}
 	}
 
 	&__body {
@@ -197,7 +187,7 @@ html.dark .features {
 		margin-bottom: rem(18px);
 		z-index: 1;
 		transition: all 1.5s ease 0.3s;
-		width: 250%;
+		width: 300%;
 		&._not-active {
 			width: 0;
 		}
@@ -225,6 +215,7 @@ html.dark .features {
 		font-weight: 700;
 		font-size: rem(70px);
 		line-height: em(90px, 70px);
+		min-width: max-content;
 	}
 
 	&__text {
@@ -359,13 +350,14 @@ html.dark .brings-bg__2 {
 		line-height: 1.31em;
 		color: var(--accent-color);
 		span {
+			display: flex;
 			color: var(--main-color);
 			position: relative;
 			&::after {
 				content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='25' height='19' viewBox='0 0 25 19'><path d='M0.414429 10.5033H20.901L14.1242 17.1923L15.6099 18.6588L23.3249 11.0178H23.351L24.8106 9.57711L23.351 8.11066H23.3249L15.6099 0.469727L14.1242 1.93617L20.7446 8.44512H0.414429V10.5033Z' fill='%23214e41'/></svg>");
 				transition: all 0.3s ease 0s;
 				@include adaptiv-value("margin-left", 40, 12.5, 1);
-				margin-left: rem(40px);
+				font-size: rem(19px);
 			}
 			&:hover {
 				&::after {
@@ -478,11 +470,12 @@ html.dark .brings-text__1 span::after {
 		display: flex;
 		justify-content: center;
 		img {
-			border-radius: 42px 42px 0 0;
+			border-radius: 34px 34px 0 0;
 			height: rem(500px);
 			object-position: center bottom;
 			object-fit: contain;
 			max-height: 75vh;
+			max-width: 100%;
 		}
 	}
 

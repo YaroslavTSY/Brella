@@ -52,12 +52,12 @@
 		gap: rem(105px);
 	}
 	&__logo {
-		display: inline-flex;
-		justify-content: center;
 		transition: all 0.3s ease 0s;
-		font-size: rem(98px);
 		height: fit-content;
-		transform: translateY(rem(-34px));
+		svg,
+		svg path {
+			fill: var(--base-color);
+		}
 		&:hover {
 			filter: drop-shadow(0px 0px 10px var(--gray-color));
 		}
@@ -111,7 +111,7 @@
 		input,
 		input::placeholder {
 			color: var(--base-color);
-			font-size: rem(14px);
+			font-size: rem(14px, 1000);
 			line-height: em(24px, 14px);
 			letter-spacing: em(0.02px, 14px);
 		}
@@ -178,6 +178,7 @@
 
 	&__link {
 		font-weight: 700;
+		margin: auto;
 		&-privacy {
 			padding-right: rem(10px);
 			border-right: 1px solid var(--base-color);
@@ -202,8 +203,16 @@ html.dark {
 		button {
 			color: var(--main-color);
 		}
-		&-menu__block li:after {
-			background-color: var(--main-color);
+		&-menu {
+			&__logo {
+				svg,
+				svg path {
+					fill: var(--main-color);
+				}
+			}
+			&__block li:after {
+				background-color: var(--main-color);
+			}
 		}
 	}
 	.contact {

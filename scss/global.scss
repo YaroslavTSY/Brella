@@ -1,5 +1,5 @@
 :root {
-	font-size: $base-font-size;
+	font-size: 1rem;
 }
 
 body {
@@ -29,7 +29,7 @@ button {
 	max-width: calc(#{$maxWidthContainer + px} + 30px); // Enter the value
 	margin: 0 auto;
 	padding: 0px 15px;
-	@media (min-width: em(1920px, 16px)) {
+	@media (min-width: 1920px) {
 		max-width: calc(768px + #{$maxWidthContainer - 768} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
@@ -38,7 +38,7 @@ button {
 	@extend [class*="__container"];
 	max-width: calc(1320px + 30px);
 
-	@media (min-width: em(1920px, 16px)) {
+	@media (min-width: 1920px) {
 		max-width: calc(768px + (1320 + 30 - 768) * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
@@ -101,14 +101,14 @@ section {
 }
 
 .btn {
-	min-width: fit-content;
+	min-width: max-content;
 	&__green {
 		padding: rem(10px) rem(14px);
 		background-color: var(--accent-color);
 		border-radius: $defautBorderRadius;
 		color: var(--base-color);
 		font-weight: 700;
-		font-size: 14px;
+		font-size: rem(14px, 1000);
 		line-height: 1.43em;
 		transition: all 0.3s ease 0s;
 		&:hover {
@@ -130,15 +130,13 @@ section {
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
 	// font-size: rem(36px);
-	// @include adaptiv-value("font-size", 36, 28, 0);
-	font-size: vw(36, 28);
+	@include adaptiv-value("font-size", 36, 28, 0);
 	line-height: 1.28em;
 }
 
 .text {
 	// font-size: rem(18px);
-	// @include adaptiv-value("font-size", 18, 16, 0);
-	font-size: vw(18, 16);
+	@include adaptiv-value("font-size", 18, 16, 0);
 	line-height: 1.67em;
 	color: var(--gray-color);
 }
@@ -206,4 +204,11 @@ section {
 .addres__mail {
 }
 .phone {
+}
+
+._from-bottom {
+	&._not-active {
+		transform: translateY(100%);
+		opacity: 0;
+	}
 }
