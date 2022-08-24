@@ -8,6 +8,9 @@
 	padding: rem(25px) 0;
 	background-color: var(--base-color);
 	color: var(--main-color);
+	&._not-active {
+		transform: scale(0.85);
+	}
 	&__container-big {
 		display: flex;
 		align-items: center;
@@ -35,6 +38,12 @@
 	&__content {
 		display: flex;
 		@include adaptiv-value("margin-right", 25, 10, 1);
+		&._active {
+			.menu__list {
+				transform: none;
+				opacity: 1;
+			}
+		}
 	}
 
 	&-content__wrapper {

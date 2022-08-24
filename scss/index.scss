@@ -28,7 +28,6 @@ html.dark .hero {
 }
 .offer {
 	&__title {
-		transition: all 1s ease 0s;
 		@include adaptiv-value("max-width", 520, 300, 0);
 		@include adaptiv-value("margin-bottom", 40, 20, 0);
 	}
@@ -38,7 +37,6 @@ html.dark .hero {
 		font-weight: 700;
 		line-height: 1.5em;
 		@include adaptiv-value("margin-bottom", 16, 20, 0);
-		transition: all 1s ease 0.2s;
 	}
 
 	&__form {
@@ -47,7 +45,6 @@ html.dark .hero {
 		border-radius: $defautBorderRadius;
 		overflow: hidden;
 		background: var(--base-color);
-		transition: all 1s ease 0.4s;
 	}
 
 	&__input {
@@ -72,7 +69,6 @@ html.dark .hero {
 }
 .features {
 	position: absolute;
-	transition: all 0.3s ease 0s;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	left: rem(15px);
 	right: rem(15px);
@@ -89,6 +85,9 @@ html.dark .hero {
 	background-color: var(--base-color);
 	overflow: hidden;
 	border-radius: $defautBorderRadius;
+}
+.features:default {
+	transition: all 0.3s ease 0s;
 }
 html.dark .features {
 	filter: drop-shadow(0px 4px 4px rgba(256, 256, 256, 0.15));
@@ -465,10 +464,18 @@ html.dark .brings-text__1 span::after {
 		align-items: center;
 	}
 
-	&__img {
+	&__video {
 		flex: 1;
 		display: flex;
 		justify-content: center;
+		transition: all 0.8s ease 0s;
+		&._anim-translate_bottom._not-active {
+			transform: translateX(0) translateY(100%);
+			flex: 0;
+			@media (max-width: em(767px, $base-font-size)) {
+				margin-top: -50%;
+			}
+		}
 		img {
 			border-radius: 34px 34px 0 0;
 			height: rem(500px);
@@ -495,7 +502,7 @@ html.dark .brings-text__1 span::after {
 	&__text {
 	}
 
-	&__more {
+	&__play {
 	}
 }
 
@@ -509,6 +516,9 @@ html.dark .brings-text__1 span::after {
 			rgba(255, 255, 255, 0) 100%
 		),
 		url(../img/employers.jpg) 50% 0 / cover no-repeat;
+	&._not-active {
+		background-position: 25% 0;
+	}
 	&__container {
 	}
 	&__body {
@@ -621,7 +631,6 @@ html.dark .employers {
 	}
 }
 .post {
-	transition: all 0.3s ease 0s;
 	&__img {
 		margin-bottom: rem(20px);
 		img {

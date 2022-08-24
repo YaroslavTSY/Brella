@@ -142,6 +142,7 @@ section {
 }
 
 .content__more {
+	color: var(--main-color);
 	position: relative;
 	display: inline-block;
 	font-size: rem(18px);
@@ -206,9 +207,118 @@ section {
 .phone {
 }
 
-._from-bottom {
-	&._not-active {
-		transform: translateY(100%);
-		opacity: 0;
+._anim {
+	&-item {
+		transition: all 0.8s ease 0s !important;
+	}
+	&-delay {
+		&_200 {
+			transition: all 0.8s ease 0.2s !important;
+		}
+		&_400 {
+			transition: all 0.8s ease 0.4s !important;
+		}
+		&_600 {
+			transition: all 0.8s ease 0.6s !important;
+		}
+		&_800 {
+			transition: all 0.8s ease 0.8s !important;
+		}
+		&_1000 {
+			transition: all 0.8s ease 1s !important;
+		}
+	}
+	&-translate {
+		&_top {
+			&._not-active {
+				transform: translateY(-100%);
+				opacity: 0;
+				@media (max-width: em(991px, $base-font-size)) {
+					transform: translateY(0) translateX(-100%);
+				}
+			}
+		}
+		&_right {
+			&._not-active {
+				transform: translateX(100%);
+				opacity: 0;
+				@media (max-width: em(991px, $base-font-size)) {
+					transform: translateX(0) translateY(100%);
+				}
+			}
+		}
+		&_bottom {
+			&._not-active {
+				transform: translateY(100%);
+				opacity: 0;
+				@media (max-width: em(991px, $base-font-size)) {
+					transform: translateY(0) translateX(100%);
+				}
+			}
+		}
+		&_left {
+			&._not-active {
+				transform: translateX(-100%);
+				opacity: 0;
+				@media (max-width: em(991px, $base-font-size)) {
+					transform: translateX(0) translateY(-100%);
+				}
+			}
+		}
+		&_z {
+			position: relative;
+			z-index: -5;
+		}
+	}
+	&-scale {
+		&._not-active {
+			transform: scale(0.75);
+			opacity: 0;
+		}
+	}
+	&-linear-block {
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+		&._not-active {
+			animation: none;
+		}
+		&_left {
+			@extend ._anim-linear-block;
+			animation-name: linear-block-left;
+		}
+		&_right {
+			@extend ._anim-linear-block;
+			animation-name: linear-block-right;
+		}
+	}
+}
+
+@keyframes linear-block-left {
+	0% {
+		transform: scaleX(0.15) translateX(2100px);
+	}
+	50% {
+		transform: scaleX(0.15) translateX(-2100px);
+	}
+	75% {
+		transform: translateX(0px);
+	}
+	100% {
+		transfrom: scaleX(1) translateX(0);
+	}
+}
+@keyframes linear-block-right {
+	0% {
+		transform: scaleX(0.15) translateX(-2100px);
+	}
+	50% {
+		transform: scaleX(0.15) translateX(2100px);
+	}
+	75% {
+		transform: translateX(0px);
+	}
+	100% {
+		transfrom: scaleX(1) translateX(0);
 	}
 }
