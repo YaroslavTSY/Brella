@@ -12,14 +12,14 @@
 
 	family=Roboto:wght@400;700&
 
-	display=swap&_v=20220824191555" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220824191555">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220824191555">
+	display=swap&_v=20220911153919" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220911153919">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220911153919">
 </head>
 
 <body>
 	<div class="wrapper" id="top">
-		<header class="header _anim-item _anim-scale _anim-no-hide _not-active">
+		<header class="header">
 	<div class="header__container-big">
 		<div class="header__wrapper">
 			<div class="header__logo">
@@ -46,9 +46,9 @@
 			<div class="header__content header-content">
 				<div class="header-content__wrapper">
 					<div class="header__menu menu">
-						<nav id="nav" class="menu__body">
+						<nav id="nav" class="menu__body _anim-item _anim-translate_left _not-active _anim-translate_z">
 							<!-- <div id="pointer" class="menu__pointer"></div> -->
-							<ul class="menu__list _anim-item _not-active _anim-translate_left">
+							<ul class="menu__list _anim-body">
 								<li class="underline"><a href="##" id="menu-link" class="menu__link">Our Plan</a></li>
 								<li class="underline"><a href="##" id="menu-link" class="menu__link">Employers</a></li>
 								<li class="underline"><a href="##" id="menu-link" class="menu__link">Brokers</a></li>
@@ -87,21 +87,24 @@
 		<main class="page page__index">
 			<section class="hero">
 				<div class="hero__content">
-					<div class="hero__container">
+					<div class="hero__container _anim-item _anim-scale _not-active">
 						<div class="hero__offer offer">
 							<h2 class="offer__title title _anim-item _anim-translate_bottom _anim-delay_200 _not-active">
-								Give your team peace of mind with supplemental health insurance from Brella.
+								<div class="_anim-body">
+									Give your team peace of mind with supplemental health insurance from Brella.
+								</div>
 							</h2>
 							<div class="text offer__text _anim-item _anim-translate_bottom _anim-delay_400 _not-active">
-								<p>I'm wondering...</p>
+								<p class="_anim-body">I'm wondering...</p>
 							</div>
-							<form action="##"
-								class="offer__form _anim-item _anim-translate_bottom _anim-delay_600 _not-active">
-								<input type="text" placeholder="how Brella's plan works" name="offer" class="offer__input">
-								<button type="submit" class="btn btn__green offer__submit">Find out</button>
-							</form>
+							<div class="_anim-item _anim-translate_bottom _anim-delay_600 _not-active">
+								<form action="##" class="offer__form _anim-body">
+									<input type="text" placeholder="how Brella's plan works" name="offer" class="offer__input">
+									<button type="submit" class="btn btn__green offer__submit">Find out</button>
+								</form>
+							</div>
 						</div>
-						<div class="hero__features features _anim-item _anim-scale _not-active">
+						<div class="hero__features features _anim-body">
 							<div class="features__block block-features">
 								<div class="block-features__img">
 									<picture><source srcset="img/coverage.webp" type="image/webp"><img src="img/coverage.png" alt=""></picture>
@@ -149,19 +152,23 @@
 				<div class="why__container">
 					<div class="why__body">
 						<div class="type-block why__content">
-							<h3 class="why__subtitle subtitle _anim-item _anim-translate_left _not-active">
-								Why Brella?
-							</h3>
-							<h2 class="why__title title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-								Today, any health insurance deductible can feel like a high deductible.
-							</h2>
-							<p class="text why__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-								Brella's supplemental health plan enhances your health benefit strategy to ensure that health
-								hardships don't become financial burdens.
-							</p>
-							<p class="_anim-item _anim-translate_left _anim-delay_600 _not-active">
-								<a href="##" class="content__more underline why__more">See our plan</a>
-							</p>
+							<div class="_anim-item _anim-translate_left _anim-no-hide _not-active">
+								<h3 class="why__subtitle subtitle _anim-body">Why Brella?</h3>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_200 _anim-no-hide _not-active">
+								<h2 class="why__title title _anim-body">Today, any health insurance deductible can feel like a
+									high deductible.
+								</h2>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_400 _anim-no-hide _not-active">
+								<p class="text why__text _anim-body">
+									Brella's supplemental health plan enhances your health benefit strategy to ensure that health
+									hardships don't become financial burdens.
+								</p>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_600 _anim-no-hide _not-active">
+								<a href="##" class="content__more underline why__more _anim-body">See our plan</a>
+							</div>
 						</div>
 						<div class="why__stats stats">
 							<div class="stats__body">
@@ -176,11 +183,11 @@
 								</div>
 								<div class="stats__columns column">
 									<div class="column__item column__deductible deductible"">
-												<div class=" column__absolute column__price">
-										$ <span data-digits-counter="700">1644</span>
-									</div>
-									<div class="column__value deductible__value _anim-item _not-active _anim-no-hide">
+									<div class=" column__value deductible__value _anim-item _not-active _anim-no-hide">
 										<div>
+											<div class=" column__absolute column__price">
+												$ <span data-digits-counter="700">1644</span>
+											</div>
 										</div>
 									</div>
 									<p class="column__absolute column__desc">
@@ -189,12 +196,11 @@
 								</div>
 								<div class="stats-pointer__column _anim-item _not-active"></div>
 								<div class="column__item column__annual-max annual-max">
-									<div class="column__absolute column__price">
-										$ <span data-digits-counter="700">4039</span>
-									</div>
 									<div class="column__value annual-max__value _anim-item _not-active _anim-no-hide">
 										<div>
-
+											<div class="column__absolute column__price">
+												$ <span data-digits-counter="700">4039</span>
+											</div>
 										</div>
 									</div>
 									<p class="column__absolute column__desc">
@@ -217,9 +223,9 @@
 					brella brings
 				</h4>
 				<div class="full-screen-section__body brings__body">
-					<div class="full-screen-section-block full-screen-section-block__1 brings-block brings-block__1">
-						<div
-							class="full-screen-section-bg full-screen-section-bg__1 brings-bg brings-bg__1  _anim-item _anim-linear-block_right _anim-no-hide _not-active">
+					<div
+						class="full-screen-section-block full-screen-section-block__1 brings-block brings-block__1 _anim-item _anim-linear-block_right _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__1 brings-bg brings-bg__1 _anim-body">
 						</div>
 						<div class="brings-content brings-content__1">
 							<div class="brings-text brings-text__1">
@@ -244,9 +250,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="full-screen-section-block full-screen-section-block__2 brings-block brings-block__2">
-						<div
-							class="full-screen-section-bg full-screen-section-bg__2 brings-bg brings-bg__2 _anim-item _anim-linear-block_left _anim-no-hide _not-active">
+					<div
+						class="full-screen-section-block full-screen-section-block__2 brings-block brings-block__2 _anim-item _anim-linear-block_left _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__2 brings-bg brings-bg__2 _anim-body">
 						</div>
 						<div class="brings-content brings-content__2">
 							<div class="brings-text brings-text__2">
@@ -268,43 +274,54 @@
 			<div class="plan__body">
 				<div class="plan__content">
 					<div class="type-block plan__info">
-						<h4 class="subtitle plan__subtitle _anim-item _anim-translate_left _not-active">
-							one plan, more coverage
-						</h4>
-						<h2 class="title plan__title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-							No one can predict which health issues might come their way.
-						</h2>
-						<p class="text plan__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-							Our broad supplemental coverage gets rid of the guesswork and puts cash in your team’s pockets
-							for
-							most conditions that require urgent medical attention.
-						</p>
+						<div class="_anim-item _anim-translate_left _not-active">
+							<h4 class="subtitle plan__subtitle _anim-body">one plan, more coverage</h4>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_200 _not-active">
+							<h2 class="title plan__title _anim-body">
+								No one can predict which health issues might come their way.
+							</h2>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_400 _not-active">
+							<p class="text plan__text _anim-body">
+								Our broad supplemental coverage gets rid of the guesswork and puts cash in your team’s pockets
+								for
+								most conditions that require urgent medical attention.
+							</p>
+						</div>
 					</div>
-					<div class="plan__img no-webp">
-						<picture><source srcset="img/plan.webp" type="image/webp"><img src="img/plan.png" class="no-webp" alt="family"></picture>
+					<div class="plan__img">
+						<picture><source srcset="img/plan.webp" type="image/webp"><img src="img/plan.png" alt="family"></picture>
 					</div>
 				</div>
 				<div class="plan__numbers">
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>5</span>K</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_200 _not-active">covered injuries
-							and illnesses from fractures and appendicitis to cancer</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_200 _not-active">
+							<p class="_anim-body">covered injuries and illnesses from fractures and appendicitis to cancer</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>1</span>X</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_400 _not-active">more covered
-							conditions than Accident and Critical Illness plans—combined</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_400 _not-active">
+							<p class="_anim-body">more covered conditions than Accident and Critical Illness plans—combined</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>40</span>%</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_600 _not-active">plans are 100%
-							guaranteed issue. No medical underwriting required</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_600 _not-active">
+							<p class="_anim-body">
+								plans are 100% guaranteed issue. No medical underwriting required
+							</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>0</span></div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_800 _not-active">Zero limitations
-							or
-							exclusions for pre-existing conditions</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_800 _not-active">
+							<p class="_anim-body">
+								Zero limitations or exclusions for pre-existing conditions
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -312,53 +329,65 @@
 	</section>
 	<section class="exp">
 		<div class="exp__container">
-			<div class="exp__body">
-				<div class="exp__video _anim-translate_bottom _anim-translate_z _not-active">
+			<div class="exp__body _not-active _anim-translate_bottom _anim-translate_z">
+				<div class="exp__video _anim-body">
 					<img src="files/gif/phone.gif" alt="">
 				</div>
 				<div class="type-block exp__content">
-					<h4 class="subtitle exp__subtitle _anim-item _anim-translate_right _not-active">
-						a better claims experience
-					</h4>
-					<h2 class="title exp__title _anim-item _anim-translate_right _anim-delay_200 _not-active">
-						Give your people a plan that pays in hours—not weeks.
-					</h2>
-					<p class="text exp__text _anim-item _anim-translate_right _anim-delay_400 _not-active">
-						Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim
-						sooner
-						and
-						get paid faster via our Member Portal or mobile app.
-					</p>
-					<p>
-						<button type="button"
-							class="content__more underline exp__play _anim-item _anim-translate_right _anim-delay_600 _not-active">Play
+					<div class="_anim-item _anim-translate_right _not-active">
+						<h4 class="subtitle exp__subtitle _anim-body">
+							a better claims experience
+						</h4>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_200 _not-active">
+						<h2 class="title exp__title _anim-body">
+							Give your people a plan that pays in hours—not weeks.
+						</h2>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_400 _not-active">
+						<p class="text exp__text _anim-body">
+							Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim
+							sooner
+							and
+							get paid faster via our Member Portal or mobile app.
+						</p>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_600 _not-active">
+						<button type="button" class="content__more underline exp__play _anim-body">Play
 							Video</button>
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="employers _anim-item _not-active">
-		<div class="employers__container">
-			<div class="employers__body">
-				<div class="type-block employers__content">
-					<h4 class="subtitle employers__subtitle _anim-item _anim-translate_left _not-active">
-						for employers
-					</h4>
-					<h2 class="title employers__title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-						Easy enrollment meets simple administration.
-					</h2>
-					<p class="text employers__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-						Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or
-						we’ll
-						plug
-						into yours.
-					</p>
-					<p>
-						<a href="##"
-							class="content__more underline employers__more _anim-item _anim-translate_left _anim-delay_600 _not-active">Learn
-							more</a>
-					</p>
+	<section class="employers _anim-item _anim-no-hide _not-active">
+		<div class="employers__wrapper _anim-body">
+			<div class="employers__container">
+				<div class="employers__body">
+					<div class="type-block employers__content">
+						<div class="_anim-item _anim-translate_left _not-active">
+							<h4 class="subtitle employers__subtitle _anim-body">
+								for employers
+							</h4>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_200 _not-active">
+							<h2 class="title employers__title _anim-body">
+								Easy enrollment meets simple administration.
+							</h2>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_400 _not-active">
+							<p class="text employers__text _anim-body">
+								Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or
+								we’ll
+								plug
+								into yours.
+							</p>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_600 _not-active">
+							<a href="##" class="content__more underline employers__more _anim-body">Learn
+								more</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -458,31 +487,38 @@
 		<div class="posts__container">
 			<div class="posts__wrapper">
 				<a href="##" class="posts__post post _anim-item _anim-translate_left _not-active">
-					<div class="post__img">
-						<picture><source srcset="img/podcast.webp" type="image/webp"><img src="img/podcast.jpg" alt=""></picture>
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<picture><source srcset="img/podcast.webp" type="image/webp"><img src="img/podcast.jpg" alt=""></picture>
+						</div>
+						<h4 class="subtitle post__subtitle">Podcast</h4>
+						<h3 class="title post__title">
+							Better Voluntary Benefits with NFP Voluntary Benefits Practice Leader, Kim Heald
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Podcast</h4>
-					<h3 class="title post__title">
-						Better Voluntary Benefits with NFP Voluntary Benefits Practice Leader, Kim Heald
-					</h3>
 				</a>
-				<a href="##" class="posts__post post _anim-item _anim-translate_top _anim-delay_200 _not-active">
-					<div class="post__img">
-						<picture><source srcset="img/innovation.webp" type="image/webp"><img src="img/innovation.jpg" alt=""></picture>
+				<a href="##"
+					class="posts__post post _anim-item _anim-translate_top _anim-delay_200 _anim-no-hide _not-active">
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<picture><source srcset="img/innovation.webp" type="image/webp"><img src="img/innovation.jpg" alt=""></picture>
+						</div>
+						<h4 class="subtitle post__subtitle">Insurance Innovation</h4>
+						<h3 class="title post__title">
+							How to Design Simpler Insurance Benefits
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Insurance Innovation</h4>
-					<h3 class="title post__title">
-						How to Design Simpler Insurance Benefits
-					</h3>
 				</a>
 				<a href="##" class="posts__post post _anim-item _anim-translate_right _not-active">
-					<div class="post__img">
-						<picture><source srcset="img/strategy.webp" type="image/webp"><img src="img/strategy.jpg" alt=""></picture>
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<picture><source srcset="img/strategy.webp" type="image/webp"><img src="img/strategy.jpg" alt=""></picture>
+						</div>
+						<h4 class="subtitle post__subtitle">Benefits Strategy</h4>
+						<h3 class="title post__title">
+							Executive Benefits Outlook with Dan Aceti
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Benefits Strategy</h4>
-					<h3 class="title post__title">
-						Executive Benefits Outlook with Dan Aceti
-					</h3>
 				</a>
 			</div>
 		</div>
@@ -491,8 +527,9 @@
 		<div class="full-screen-section__wrapper start__wrapper">
 			<div class="full-screen-section__container start__container">
 				<div class="full-screen-section__body start__body">
-					<div class="full-screen-section-block full-screen-section-block__1 start-block start-block__1">
-						<div class="full-screen-section-bg full-screen-section-bg__1 start-bg start-bg__1">
+					<div
+						class="full-screen-section-block full-screen-section-block__1 start-block start-block__1 _anim-item _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__1 start-bg start-bg__1 _anim-body">
 							<picture><source srcset="img/cta-bg.webp" type="image/webp"><img src="img/cta-bg.jpg" alt=""></picture>
 						</div>
 					</div>
@@ -501,12 +538,18 @@
 						</div>
 						<div class="full-screen-section__content start__content">
 							<h2 class="title start__title">
-								<p>Ready to explore Brella’s supplemental health solution?</p>
-								<p>Let’s talk.</p>
+								<div class="_anim-item _anim-translate_top _not-active">
+									<p class="_anim-body">Ready to explore Brella’s supplemental health solution?</p>
+								</div>
+								<div class="_anim-item _anim-translate_top _anim-delay_200 _not-active">
+									<p class="_anim-body">Let’s talk.</p>
+								</div>
 							</h2>
-							<button class="btn btn__green start__btn">
-								Get in touch
-							</button>
+							<div class="_anim-item _anim-translate_top _anim-delay_400 _not-active">
+								<button class="btn btn__green start__btn _anim-body">
+									Get in touch
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -519,8 +562,9 @@
 		<div class="footer__main main-footer">
 			<div class="main-footer__content">
 				<div class="main-footer__menu footer-menu">
-					<a href="#top" class="footer-menu__logo">
-						<svg width="98" height="28" viewBox="0 0 98 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<a href="#top" class="footer-menu__logo _anim-item _anim-translate_top _anim-no-hide _not-active">
+						<svg class="_anim-body" width="98" height="28" viewBox="0 0 98 28" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								d="M60.6667 0H64.2963V27.4815H60.6667V0ZM40.4444 18.6667C40.4444 21.0864 41.7193 26.4756 46.6667 25.9259C51.3333 25.4074 51.8518 21.2593 51.8518 21.2593H55.4815C55.4815 22.8148 53.1786 28 46.6667 28C39.4074 28 36.2963 22.2963 36.2963 18.6667C36.2963 15.037 37.3333 8.2963 46.6667 8.2963C54.1333 8.2963 56 14.5185 56 18.6667H40.4444ZM51.8518 16.5926H40.4444C40.7901 14.5185 41.4815 10.3704 46.6667 10.3704C51.1223 10.3704 51.8518 15.5556 51.8518 16.5926ZM72.5926 0H69.4815H68.963V27.4815H72.5926V0ZM25.9259 8.8148L27.4815 14C27.8272 12.2716 31.1111 7.77778 35.2593 8.8148V12.4444C32.8395 12.0988 28 13.1704 28 18.1481V27.4815H24.3704V8.8148H25.9259ZM93.8519 12.4444L95.4074 8.8148H97.4815V27.5912L93.3333 27.4815V24.3704C92.642 25.5802 90.4296 28 87.1111 28C82.963 28 76.7407 25.9259 76.7407 18.1481C76.7407 10.3704 82.963 7.77778 87.1111 8.29628C90.404 8.70789 92.9877 11.0617 93.8519 12.4444ZM93.3333 18.1481C93.3333 13.1704 89.7037 10.3704 87.1111 10.3704C84 10.3704 80.8889 12.3407 80.8889 18.1481C80.8889 23.9555 84 25.9259 87.1111 25.9259C89.1852 25.9259 93.3333 23.1259 93.3333 18.1481ZM0 27.4815V1.55556H12.4444C15.5556 1.55556 18.6667 3.11111 18.6667 7.77778C18.6667 12.4444 14.5185 13.4815 12.4444 14C14.8642 14 19.7037 15.3481 19.7037 20.7407C19.7037 26.1333 15.2099 27.4815 12.963 27.4815H0ZM4.14815 3.62963V12.963H10.8889C12.4444 12.963 14.5185 10.3704 14.5185 7.77778C14.5185 5.13384 11.9259 3.62963 10.3704 3.62963H4.14815ZM4.14815 15.037V25.4074H11.4074C13.1358 25.0617 15.5556 23.6444 15.5556 20.7407C15.5556 17.1111 12.963 15.037 10.3704 15.037H4.14815Z"
 								fill="white" />
@@ -532,11 +576,18 @@
 							<li class="footer-menu__title underline">
 								<a href="##">Join Brella</a>
 							</li>
-							<li class="underline"><a href="##">Our Plan</li>
-							<li class="underline"><a href="##">Employers</a></li>
-							<li class="underline"><a href="##">Brokers</a></li>
-							<li class="underline"><a href="##">Members</a></li>
-
+							<li class="underline">
+								<a href="##">Our Plan</a>
+							</li>
+							<li class="underline">
+								<a href="##">Employers</a>
+							</li>
+							<li class="underline">
+								<a href="##">Brokers</a>
+							</li>
+							<li class="underline">
+								<a href="##">Members</a>
+							</li>
 						</ul>
 						<ul class="footer-menu__block">
 							<li class="footer-menu__title underline">
@@ -552,75 +603,92 @@
 				</div>
 				<div class="main-footer__contact contact">
 					<div class="contact__text">
-						<p class="contact__title">Get the latest</p>
-						<p>Sign up to receive benefits news and insights in your inbox once a month.</p>
+						<div class="contact__title _anim-item _anim-translate_left _not-active">
+							<p class="_anim-body">Get the latest</p>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_200 _not-active">
+							<p class="_anim-body">Sign up to receive benefits news and insights in your inbox once a month.</p>
+						</div>
 					</div>
-					<form class="contact__form" action="##">
-						<input type="email" name="email" id="email" placeholder="Email*">
-						<button type="submit">
-							<svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M0 7.17114H15.9551L10.6774 11.9519L11.8344 13L17.8429 7.5389H17.8632L19 6.50919L17.8632 5.4611H17.8429L11.8344 0L10.6774 1.04809L15.8333 5.70014H0V7.17114Z"
-									fill="#214E41" />
-							</svg>
-						</button>
-					</form>
-					<div class="contact__icons">
-						<a href="##" class="contact__link contact__linked-in">
-							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M24.0807 0H1.91931C1.41027 0 0.922092 0.202212 0.562152 0.562152C0.202212 0.922092 0 1.41027 0 1.91931V24.0807C0 24.5897 0.202212 25.0779 0.562152 25.4379C0.922092 25.7978 1.41027 26 1.91931 26H24.0807C24.5897 26 25.0779 25.7978 25.4379 25.4379C25.7978 25.0779 26 24.5897 26 24.0807V1.91931C26 1.41027 25.7978 0.922092 25.4379 0.562152C25.0779 0.202212 24.5897 0 24.0807 0ZM7.74944 22.1488H3.84042V9.73195H7.74944V22.1488ZM5.79222 8.01125C5.34881 8.00875 4.91608 7.87496 4.54863 7.62676C4.18118 7.37856 3.89549 7.02708 3.72762 6.61666C3.55974 6.20625 3.5172 5.75531 3.60537 5.32074C3.69353 4.88618 3.90845 4.48747 4.223 4.17493C4.53755 3.86239 4.93763 3.65004 5.37276 3.56467C5.80788 3.47929 6.25854 3.52473 6.66786 3.69523C7.07719 3.86574 7.42683 4.15368 7.67267 4.52271C7.91851 4.89175 8.04952 5.32533 8.04917 5.76875C8.05335 6.06562 7.99772 6.36029 7.8856 6.63521C7.77347 6.91012 7.60715 7.15964 7.39654 7.36891C7.18592 7.57817 6.93534 7.74289 6.65971 7.85325C6.38408 7.9636 6.08906 8.01734 5.79222 8.01125ZM22.1578 22.1596H18.2506V15.3761C18.2506 13.3756 17.4001 12.7581 16.3024 12.7581C15.1432 12.7581 14.0057 13.6319 14.0057 15.4267V22.1596H10.0967V9.74097H13.8558V11.4617H13.9064C14.2838 10.6979 15.6054 9.3925 17.6222 9.3925C19.8033 9.3925 22.1596 10.6871 22.1596 14.4788L22.1578 22.1596Z"
-									fill="white" />
-							</svg>
+					<div class="_anim-item _anim-translate_left _anim-delay_400 _not-active">
+						<form class="contact__form _anim-body" action="##">
+							<input type="email" name="email" id="email" placeholder="Email*">
+							<button type="submit">
+								<svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0 7.17114H15.9551L10.6774 11.9519L11.8344 13L17.8429 7.5389H17.8632L19 6.50919L17.8632 5.4611H17.8429L11.8344 0L10.6774 1.04809L15.8333 5.70014H0V7.17114Z"
+										fill="#214E41" />
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="_anim-item _anim-translate_left _anim-delay_600 _not-active">
+						<div class="contact__icons _anim-body">
+							<a href="##" class="contact__link contact__linked-in">
+								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M24.0807 0H1.91931C1.41027 0 0.922092 0.202212 0.562152 0.562152C0.202212 0.922092 0 1.41027 0 1.91931V24.0807C0 24.5897 0.202212 25.0779 0.562152 25.4379C0.922092 25.7978 1.41027 26 1.91931 26H24.0807C24.5897 26 25.0779 25.7978 25.4379 25.4379C25.7978 25.0779 26 24.5897 26 24.0807V1.91931C26 1.41027 25.7978 0.922092 25.4379 0.562152C25.0779 0.202212 24.5897 0 24.0807 0ZM7.74944 22.1488H3.84042V9.73195H7.74944V22.1488ZM5.79222 8.01125C5.34881 8.00875 4.91608 7.87496 4.54863 7.62676C4.18118 7.37856 3.89549 7.02708 3.72762 6.61666C3.55974 6.20625 3.5172 5.75531 3.60537 5.32074C3.69353 4.88618 3.90845 4.48747 4.223 4.17493C4.53755 3.86239 4.93763 3.65004 5.37276 3.56467C5.80788 3.47929 6.25854 3.52473 6.66786 3.69523C7.07719 3.86574 7.42683 4.15368 7.67267 4.52271C7.91851 4.89175 8.04952 5.32533 8.04917 5.76875C8.05335 6.06562 7.99772 6.36029 7.8856 6.63521C7.77347 6.91012 7.60715 7.15964 7.39654 7.36891C7.18592 7.57817 6.93534 7.74289 6.65971 7.85325C6.38408 7.9636 6.08906 8.01734 5.79222 8.01125ZM22.1578 22.1596H18.2506V15.3761C18.2506 13.3756 17.4001 12.7581 16.3024 12.7581C15.1432 12.7581 14.0057 13.6319 14.0057 15.4267V22.1596H10.0967V9.74097H13.8558V11.4617H13.9064C14.2838 10.6979 15.6054 9.3925 17.6222 9.3925C19.8033 9.3925 22.1596 10.6871 22.1596 14.4788L22.1578 22.1596Z"
+										fill="white" />
+								</svg>
 
-						</a>
-						<a href="##" class="contact__link contact__twitter">
-							<svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M8.17648 21.5629C17.9878 21.5629 23.3542 13.4343 23.3542 6.38512C23.3542 6.15424 23.3542 5.9244 23.3386 5.6956C24.3826 4.94047 25.2838 4.00548 26 2.9344C25.0265 3.366 23.9937 3.64892 22.9362 3.77368C24.0498 3.10709 24.8833 2.05853 25.2814 0.823196C24.2343 1.44461 23.0887 1.88251 21.8941 2.118C21.0898 1.26279 20.0261 0.696491 18.8675 0.506737C17.709 0.316984 16.5202 0.514353 15.4851 1.06831C14.4501 1.62226 13.6264 2.5019 13.1416 3.57113C12.6569 4.64035 12.538 5.83954 12.8034 6.98312C10.6826 6.87673 8.6079 6.32557 6.71391 5.36541C4.81992 4.40524 3.14899 3.05753 1.8096 1.40976C1.12746 2.58409 0.918528 3.97426 1.22536 5.29722C1.53219 6.62018 2.3317 7.77646 3.46112 8.53064C2.61217 8.50577 1.7817 8.27674 1.04 7.86296V7.93056C1.04034 9.16215 1.46667 10.3557 2.24669 11.3088C3.02672 12.2619 4.1124 12.9159 5.3196 13.1597C4.53427 13.3739 3.71028 13.4052 2.91096 13.2512C3.25197 14.3111 3.91563 15.2379 4.80918 15.9021C5.70272 16.5663 6.78148 16.9347 7.89464 16.9557C6.78864 17.8251 5.52209 18.4678 4.16745 18.8472C2.8128 19.2266 1.39665 19.3352 0 19.1668C2.43949 20.7322 5.27792 21.5626 8.17648 21.5588"
-									fill="#FAFAFA" />
-							</svg>
+							</a>
+							<a href="##" class="contact__link contact__twitter">
+								<svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M8.17648 21.5629C17.9878 21.5629 23.3542 13.4343 23.3542 6.38512C23.3542 6.15424 23.3542 5.9244 23.3386 5.6956C24.3826 4.94047 25.2838 4.00548 26 2.9344C25.0265 3.366 23.9937 3.64892 22.9362 3.77368C24.0498 3.10709 24.8833 2.05853 25.2814 0.823196C24.2343 1.44461 23.0887 1.88251 21.8941 2.118C21.0898 1.26279 20.0261 0.696491 18.8675 0.506737C17.709 0.316984 16.5202 0.514353 15.4851 1.06831C14.4501 1.62226 13.6264 2.5019 13.1416 3.57113C12.6569 4.64035 12.538 5.83954 12.8034 6.98312C10.6826 6.87673 8.6079 6.32557 6.71391 5.36541C4.81992 4.40524 3.14899 3.05753 1.8096 1.40976C1.12746 2.58409 0.918528 3.97426 1.22536 5.29722C1.53219 6.62018 2.3317 7.77646 3.46112 8.53064C2.61217 8.50577 1.7817 8.27674 1.04 7.86296V7.93056C1.04034 9.16215 1.46667 10.3557 2.24669 11.3088C3.02672 12.2619 4.1124 12.9159 5.3196 13.1597C4.53427 13.3739 3.71028 13.4052 2.91096 13.2512C3.25197 14.3111 3.91563 15.2379 4.80918 15.9021C5.70272 16.5663 6.78148 16.9347 7.89464 16.9557C6.78864 17.8251 5.52209 18.4678 4.16745 18.8472C2.8128 19.2266 1.39665 19.3352 0 19.1668C2.43949 20.7322 5.27792 21.5626 8.17648 21.5588"
+										fill="#FAFAFA" />
+								</svg>
 
-						</a>
-						<a href="##" class="contact__link contact__youtube">
-							<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M24.6417 2.23686C25.0451 2.64286 25.3348 3.14769 25.4818 3.70082C26.0254 5.74241 26.0254 9.9999 26.0254 9.9999C26.0254 9.9999 26.0254 14.2574 25.4818 16.299C25.3348 16.8521 25.0451 17.357 24.6417 17.763C24.2383 18.169 23.7353 18.4619 23.1831 18.6124C21.1504 19.159 13.0254 19.159 13.0254 19.159C13.0254 19.159 4.90039 19.159 2.86766 18.6124C2.31548 18.4619 1.81252 18.169 1.40912 17.763C1.00572 17.357 0.716022 16.8521 0.569027 16.299C0.0253906 14.2574 0.0253906 9.9999 0.0253906 9.9999C0.0253906 9.9999 0.0253906 5.74241 0.569027 3.70082C0.716022 3.14769 1.00572 2.64286 1.40912 2.23686C1.81252 1.83087 2.31548 1.53795 2.86766 1.38741C4.90039 0.84082 13.0254 0.84082 13.0254 0.84082C13.0254 0.84082 21.1504 0.84082 23.1831 1.38741C23.7353 1.53795 24.2383 1.83087 24.6417 2.23686ZM10.3672 6.13379V13.8659L17.1626 9.99986L10.3672 6.13379Z"
-									fill="#FAFAFA" />
-							</svg>
+							</a>
+							<a href="##" class="contact__link contact__youtube">
+								<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M24.6417 2.23686C25.0451 2.64286 25.3348 3.14769 25.4818 3.70082C26.0254 5.74241 26.0254 9.9999 26.0254 9.9999C26.0254 9.9999 26.0254 14.2574 25.4818 16.299C25.3348 16.8521 25.0451 17.357 24.6417 17.763C24.2383 18.169 23.7353 18.4619 23.1831 18.6124C21.1504 19.159 13.0254 19.159 13.0254 19.159C13.0254 19.159 4.90039 19.159 2.86766 18.6124C2.31548 18.4619 1.81252 18.169 1.40912 17.763C1.00572 17.357 0.716022 16.8521 0.569027 16.299C0.0253906 14.2574 0.0253906 9.9999 0.0253906 9.9999C0.0253906 9.9999 0.0253906 5.74241 0.569027 3.70082C0.716022 3.14769 1.00572 2.64286 1.40912 2.23686C1.81252 1.83087 2.31548 1.53795 2.86766 1.38741C4.90039 0.84082 13.0254 0.84082 13.0254 0.84082C13.0254 0.84082 21.1504 0.84082 23.1831 1.38741C23.7353 1.53795 24.2383 1.83087 24.6417 2.23686ZM10.3672 6.13379V13.8659L17.1626 9.99986L10.3672 6.13379Z"
+										fill="#FAFAFA" />
+								</svg>
 
-						</a>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<hr>
 		</div>
 		<div class="footer__desc desc-footer">
-			<p>
-				Brella is a limited benefit policy; it is not a substitute for health insurance. The information provided on
-				this website is illustrative only. A complete description of benefits, limitations, and exclusions are
-				provided in your certificate of Insurance and applicable Riders. For a summary of limitations and
-				exclusions, see our FAQ. Payout values listed do not guarantee an amount to be paid for listed conditions.
-				Product not available in all states. All coverage is subject to the terms and conditions of the master group
-				policy.
-			</p>
-			<p>
-				Brella is underwritten by
-				<span class="addres__underwritten">
-					Greenhouse Life Insurance Company (NAIC 80055). Form No. PFSB11-TX
-				</span>
-			</p>
-			<p>
-				Reach us by mail at
-				<span class="addres__mail">
-					2093 Philadelphia Pike #2496, Claymont, DE 19703
-				</span>
-				and by phone at
-				<span class="phone">
-					(844) 987-1070
-				</span>
-				.
-			</p>
+			<div class="_anim-item _anim-translate_left _anim-delay_200 _anim-no-hide _not-active">
+				<p class="_anim-body">
+					Brella is a limited benefit policy; it is not a substitute for health insurance. The information provided
+					on
+					this website is illustrative only. A complete description of benefits, limitations, and exclusions are
+					provided in your certificate of Insurance and applicable Riders. For a summary of limitations and
+					exclusions, see our FAQ. Payout values listed do not guarantee an amount to be paid for listed
+					conditions.
+					Product not available in all states. All coverage is subject to the terms and conditions of the master
+					group
+					policy.
+				</p>
+			</div>
+			<div class="_anim-item _anim-translate_left _anim-delay_400 _anim-no-hide _not-active">
+				<p class="_anim-body">
+					Brella is underwritten by
+					<span class="addres__underwritten">
+						Greenhouse Life Insurance Company (NAIC 80055). Form No. PFSB11-TX
+					</span>
+				</p>
+			</div>
+			<div class="_anim-item _anim-translate_left _anim-delay_600 _anim-no-hide _not-active">
+				<p class="_anim-body">
+					Reach us by mail at
+					<span class="addres__mail">
+						2093 Philadelphia Pike #2496, Claymont, DE 19703
+					</span>
+					and by phone at
+					<span class="phone">
+						(844) 987-1070
+					</span>
+					.
+				</p>
+			</div>
 		</div>
 		<div class="footer__rights rights-footer">
 			<p>© 2021 Brella Insurance Inc. All Rights Reserved.</p>
@@ -636,7 +704,7 @@
 	</div>
 </footer>
 	</div>
-	<script src="js/app.min.js?_v=20220824191555"></script>
+	<script src="js/app.min.js?_v=20220911153919"></script>
 </body>
 
 </html>
