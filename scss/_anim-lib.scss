@@ -1,0 +1,149 @@
+._anim {
+	&-item {
+		> ._anim-body {
+			transition: all 0.8s ease 0s;
+		}
+	}
+	&-delay {
+		&_200 {
+			> ._anim-body {
+				transition: all 1s ease 0s;
+			}
+		}
+		&_400 {
+			> ._anim-body {
+				transition: all 1.2s ease 0s;
+			}
+		}
+		&_600 {
+			> ._anim-body {
+				transition: all 1.4s ease 0s;
+			}
+		}
+		&_800 {
+			> ._anim-body {
+				transition: all 1.6s ease 0s;
+			}
+		}
+		&_1000 {
+			> ._anim-body {
+				transition: all 1.8s ease 0s;
+			}
+		}
+	}
+	&-translate {
+		&_top {
+			&._not-active {
+				> ._anim-body {
+					transform: translateY(-100%);
+					@media (max-width: em(991px, $base-font-size)) {
+						transform: translateY(0) translateX(-100%);
+					}
+				}
+			}
+		}
+		&_right {
+			&._not-active {
+				> ._anim-body {
+					transform: translateX(100%);
+					@media (max-width: em(991px, $base-font-size)) {
+						transform: translateX(0) translateY(100%);
+					}
+				}
+			}
+		}
+		&_bottom {
+			&._not-active {
+				> ._anim-body {
+					transform: translateY(100%);
+					@media (max-width: em(991px, $base-font-size)) {
+						transform: translateY(0) translateX(100%);
+					}
+				}
+			}
+		}
+		&_left {
+			&._not-active {
+				> ._anim-body {
+					transform: translateX(-100%);
+					@media (max-width: em(991px, $base-font-size)) {
+						transform: translateX(0) translateY(-100%);
+					}
+				}
+			}
+		}
+		&_z {
+			> ._anim-body {
+				position: relative;
+				z-index: -5;
+			}
+		}
+	}
+	&-scale {
+		&._not-active {
+			> ._anim-body {
+				transform: scale(0.75);
+			}
+		}
+	}
+	&-linear-block {
+		> ._anim-body {
+			animation-duration: 2s;
+			animation-timing-function: ease-in;
+			animation-fill-mode: forwards;
+		}
+		&._not-active {
+			> ._anim-body {
+				animation: none;
+			}
+		}
+		&_left {
+			@extend ._anim-linear-block;
+			> ._anim-body {
+				animation-name: linear-block-left;
+			}
+		}
+		&_right {
+			@extend ._anim-linear-block;
+			> ._anim-body {
+				animation-name: linear-block-right;
+			}
+		}
+	}
+}
+[class*="_anim"] {
+	&._not-active {
+		> ._anim-body {
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes linear-block-left {
+	0% {
+		transform: scaleX(0.15) translateX(2100px);
+	}
+	50% {
+		transform: scaleX(0.15) translateX(-2100px);
+	}
+	75% {
+		transform: translateX(0px);
+	}
+	100% {
+		transfrom: scaleX(1) translateX(0);
+	}
+}
+@keyframes linear-block-right {
+	0% {
+		transform: scaleX(0.15) translateX(-2100px);
+	}
+	50% {
+		transform: scaleX(0.15) translateX(2100px);
+	}
+	75% {
+		transform: translateX(0px);
+	}
+	100% {
+		transfrom: scaleX(1) translateX(0);
+	}
+}

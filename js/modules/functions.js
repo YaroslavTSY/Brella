@@ -71,7 +71,7 @@ export function pageTheme() {
 	function setThemeClass() {
 		if (saveUserTheme) {
 			htmlBlock.classList.add(saveUserTheme)
-			resetButton.classList.add('active');
+			resetButton.classList.add('_active');
 		} else {
 			htmlBlock.classList.add(userTheme);
 		}

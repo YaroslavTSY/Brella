@@ -77,15 +77,27 @@ if (iconMenu) {
 	});
 }
 
-const playVideo = document.querySelector('.exp__video');
-const playVideoBtn = document.querySelector('.exp__play');
+const videoBody = document.querySelector('.exp__body');
+const videoBtn = document.querySelector('.exp__play');
 
-playVideoBtn.addEventListener('click', function () {
-	playVideo.classList.toggle('_not-active');
-	if (playVideo.classList.contains('_not-active')) {
-		playVideoBtn.innerHTML = "Play Video";
+videoBtn.addEventListener('click', function () {
+	videoBody.classList.toggle('_not-active');
+	if (videoBody.classList.contains('_not-active')) {
+		videoBtn.innerHTML = "Play Video";
 	} else {
-		playVideoBtn.innerHTML = "Hide Video";
+		videoBtn.innerHTML = "Hide Video";
+	}
+});
+
+const planBody = document.querySelector('.why__body');
+const planBtn = document.querySelector('.why__more');
+
+planBtn.addEventListener('click', function () {
+	planBody.classList.toggle('_not-active');
+	if (planBody.classList.contains('_not-active')) {
+		planBtn.innerHTML = "See our plan";
+	} else {
+		planBtn.innerHTML = "Hide our plan";
 	}
 });
 

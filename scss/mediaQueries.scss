@@ -1,5 +1,37 @@
 //* Mobile-first
+@media (min-width: em(2560px, $base-font-size)) {
+	:root {
+		font-size: 1.25rem;
+	}
+	[class*="__container"] {
+		max-width: calc(768px + #{$maxWidthContainer - 768} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+	[class*="__container-big"] {
+		max-width: calc(768px + (1320 + 30 - 768) * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+	.why__container {
+		@include adaptiv-value("max-width", $maxWidth, $maxWidthContainer, 2);
+	}
+	.login-list__link::before {
+		transform: scale(1.2);
+	}
+	.sponsor__button-prev,
+	.sponsor__button-next {
+		transform: scale(1.25);
+	}
+}
 @media (min-width: em(1400px, $base-font-size)) {
+	.start {
+		&-bg {
+			&__1 {
+				&._not-active {
+					> ._anim-body {
+						transform: translateX(50%);
+					}
+				}
+			}
+		}
+	}
 }
 @media (min-width: em(1200px, $base-font-size)) {
 }
@@ -106,7 +138,7 @@
 			padding: em(100px) em(30px) em(30px) em(30px);
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			background-color: var(--light-color);
 			transition: top 0.3s ease 0s;
 			&::before {
@@ -127,6 +159,7 @@
 			align-items: center;
 			flex-direction: column;
 			position: relative;
+			margin: auto;
 		}
 	}
 	.menu {
@@ -177,9 +210,7 @@
 			align-items: center;
 		}
 		&__body {
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr;
-			grid-template-areas: "." ".";
+			flex-direction: column;
 		}
 	}
 	.stats {
@@ -289,13 +320,23 @@
 			max-width: 70%;
 		}
 	}
-	html.dark .employers {
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%),
-			url(../img/employers.jpg);
-	}
 	.post {
 		text-align: center;
 		justify-content: center;
+	}
+	.start {
+		&-bg {
+			&__1 {
+				&._not-active {
+					> ._anim-body {
+						object-position: 0% -300%;
+					}
+				}
+			}
+		}
+		&__body {
+			gap: rem(240px);
+		}
 	}
 }
 @media (max-width: em(575px, $base-font-size)) {
@@ -345,10 +386,6 @@
 		&__content {
 			max-width: 100%;
 		}
-	}
-	html.dark .employers {
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.85) 90%),
-			url(../img/employers.jpg);
 	}
 	.rights-footer {
 		flex-direction: column-reverse;

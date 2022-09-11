@@ -8,21 +8,24 @@
 		<main class="page page__index">
 			<section class="hero">
 				<div class="hero__content">
-					<div class="hero__container">
+					<div class="hero__container _anim-item _anim-scale _not-active">
 						<div class="hero__offer offer">
 							<h2 class="offer__title title _anim-item _anim-translate_bottom _anim-delay_200 _not-active">
-								Give your team peace of mind with supplemental health insurance from Brella.
+								<div class="_anim-body">
+									Give your team peace of mind with supplemental health insurance from Brella.
+								</div>
 							</h2>
 							<div class="text offer__text _anim-item _anim-translate_bottom _anim-delay_400 _not-active">
-								<p>I'm wondering...</p>
+								<p class="_anim-body">I'm wondering...</p>
 							</div>
-							<form action="##"
-								class="offer__form _anim-item _anim-translate_bottom _anim-delay_600 _not-active">
-								<input type="text" placeholder="how Brella's plan works" name="offer" class="offer__input">
-								<button type="submit" class="btn btn__green offer__submit">Find out</button>
-							</form>
+							<div class="_anim-item _anim-translate_bottom _anim-delay_600 _not-active">
+								<form action="##" class="offer__form _anim-body">
+									<input type="text" placeholder="how Brella's plan works" name="offer" class="offer__input">
+									<button type="submit" class="btn btn__green offer__submit">Find out</button>
+								</form>
+							</div>
 						</div>
-						<div class="hero__features features _anim-item _anim-scale _not-active">
+						<div class="hero__features features _anim-body">
 							<div class="features__block block-features">
 								<div class="block-features__img">
 									<img src="@img/coverage.png" alt="">
@@ -70,19 +73,23 @@
 				<div class="why__container">
 					<div class="why__body">
 						<div class="type-block why__content">
-							<h3 class="why__subtitle subtitle _anim-item _anim-translate_left _not-active">
-								Why Brella?
-							</h3>
-							<h2 class="why__title title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-								Today, any health insurance deductible can feel like a high deductible.
-							</h2>
-							<p class="text why__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-								Brella's supplemental health plan enhances your health benefit strategy to ensure that health
-								hardships don't become financial burdens.
-							</p>
-							<p class="_anim-item _anim-translate_left _anim-delay_600 _not-active">
-								<a href="##" class="content__more underline why__more">See our plan</a>
-							</p>
+							<div class="_anim-item _anim-translate_left _anim-no-hide _not-active">
+								<h3 class="why__subtitle subtitle _anim-body">Why Brella?</h3>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_200 _anim-no-hide _not-active">
+								<h2 class="why__title title _anim-body">Today, any health insurance deductible can feel like a
+									high deductible.
+								</h2>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_400 _anim-no-hide _not-active">
+								<p class="text why__text _anim-body">
+									Brella's supplemental health plan enhances your health benefit strategy to ensure that health
+									hardships don't become financial burdens.
+								</p>
+							</div>
+							<div class="_anim-item _anim-translate_left _anim-delay_600 _anim-no-hide _not-active">
+								<a href="##" class="content__more underline why__more _anim-body">See our plan</a>
+							</div>
 						</div>
 						<div class="why__stats stats">
 							<div class="stats__body">
@@ -97,11 +104,11 @@
 								</div>
 								<div class="stats__columns column">
 									<div class="column__item column__deductible deductible"">
-												<div class=" column__absolute column__price">
-										$ <span data-digits-counter="700">1644</span>
-									</div>
-									<div class="column__value deductible__value _anim-item _not-active _anim-no-hide">
+									<div class=" column__value deductible__value _anim-item _not-active _anim-no-hide">
 										<div>
+											<div class=" column__absolute column__price">
+												$ <span data-digits-counter="700">1644</span>
+											</div>
 										</div>
 									</div>
 									<p class="column__absolute column__desc">
@@ -110,12 +117,11 @@
 								</div>
 								<div class="stats-pointer__column _anim-item _not-active"></div>
 								<div class="column__item column__annual-max annual-max">
-									<div class="column__absolute column__price">
-										$ <span data-digits-counter="700">4039</span>
-									</div>
 									<div class="column__value annual-max__value _anim-item _not-active _anim-no-hide">
 										<div>
-
+											<div class="column__absolute column__price">
+												$ <span data-digits-counter="700">4039</span>
+											</div>
 										</div>
 									</div>
 									<p class="column__absolute column__desc">
@@ -138,9 +144,9 @@
 					brella brings
 				</h4>
 				<div class="full-screen-section__body brings__body">
-					<div class="full-screen-section-block full-screen-section-block__1 brings-block brings-block__1">
-						<div
-							class="full-screen-section-bg full-screen-section-bg__1 brings-bg brings-bg__1  _anim-item _anim-linear-block_right _anim-no-hide _not-active">
+					<div
+						class="full-screen-section-block full-screen-section-block__1 brings-block brings-block__1 _anim-item _anim-linear-block_right _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__1 brings-bg brings-bg__1 _anim-body">
 						</div>
 						<div class="brings-content brings-content__1">
 							<div class="brings-text brings-text__1">
@@ -165,9 +171,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="full-screen-section-block full-screen-section-block__2 brings-block brings-block__2">
-						<div
-							class="full-screen-section-bg full-screen-section-bg__2 brings-bg brings-bg__2 _anim-item _anim-linear-block_left _anim-no-hide _not-active">
+					<div
+						class="full-screen-section-block full-screen-section-block__2 brings-block brings-block__2 _anim-item _anim-linear-block_left _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__2 brings-bg brings-bg__2 _anim-body">
 						</div>
 						<div class="brings-content brings-content__2">
 							<div class="brings-text brings-text__2">
@@ -189,43 +195,54 @@
 			<div class="plan__body">
 				<div class="plan__content">
 					<div class="type-block plan__info">
-						<h4 class="subtitle plan__subtitle _anim-item _anim-translate_left _not-active">
-							one plan, more coverage
-						</h4>
-						<h2 class="title plan__title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-							No one can predict which health issues might come their way.
-						</h2>
-						<p class="text plan__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-							Our broad supplemental coverage gets rid of the guesswork and puts cash in your team’s pockets
-							for
-							most conditions that require urgent medical attention.
-						</p>
+						<div class="_anim-item _anim-translate_left _not-active">
+							<h4 class="subtitle plan__subtitle _anim-body">one plan, more coverage</h4>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_200 _not-active">
+							<h2 class="title plan__title _anim-body">
+								No one can predict which health issues might come their way.
+							</h2>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_400 _not-active">
+							<p class="text plan__text _anim-body">
+								Our broad supplemental coverage gets rid of the guesswork and puts cash in your team’s pockets
+								for
+								most conditions that require urgent medical attention.
+							</p>
+						</div>
 					</div>
-					<div class="plan__img no-webp">
-						<img src="img/plan.png" class="no-webp" alt="family">
+					<div class="plan__img">
+						<img src="@img/plan.png" alt="family">
 					</div>
 				</div>
 				<div class="plan__numbers">
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>5</span>K</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_200 _not-active">covered injuries
-							and illnesses from fractures and appendicitis to cancer</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_200 _not-active">
+							<p class="_anim-body">covered injuries and illnesses from fractures and appendicitis to cancer</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>1</span>X</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_400 _not-active">more covered
-							conditions than Accident and Critical Illness plans—combined</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_400 _not-active">
+							<p class="_anim-body">more covered conditions than Accident and Critical Illness plans—combined</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>40</span>%</div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_600 _not-active">plans are 100%
-							guaranteed issue. No medical underwriting required</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_600 _not-active">
+							<p class="_anim-body">
+								plans are 100% guaranteed issue. No medical underwriting required
+							</p>
+						</div>
 					</div>
 					<div class="plan__block">
 						<div class="plan__number"><span data-digits-counter>0</span></div>
-						<p class="plan__desc _anim-item _anim-translate_bottom _anim-delay_800 _not-active">Zero limitations
-							or
-							exclusions for pre-existing conditions</p>
+						<div class="plan__desc _anim-item _anim-no-hide _anim-translate_bottom _anim-delay_800 _not-active">
+							<p class="_anim-body">
+								Zero limitations or exclusions for pre-existing conditions
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -233,53 +250,65 @@
 	</section>
 	<section class="exp">
 		<div class="exp__container">
-			<div class="exp__body">
-				<div class="exp__video _anim-translate_bottom _anim-translate_z _not-active">
+			<div class="exp__body _not-active _anim-translate_bottom _anim-translate_z">
+				<div class="exp__video _anim-body">
 					<img src="files/gif/phone.gif" alt="">
 				</div>
 				<div class="type-block exp__content">
-					<h4 class="subtitle exp__subtitle _anim-item _anim-translate_right _not-active">
-						a better claims experience
-					</h4>
-					<h2 class="title exp__title _anim-item _anim-translate_right _anim-delay_200 _not-active">
-						Give your people a plan that pays in hours—not weeks.
-					</h2>
-					<p class="text exp__text _anim-item _anim-translate_right _anim-delay_400 _not-active">
-						Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim
-						sooner
-						and
-						get paid faster via our Member Portal or mobile app.
-					</p>
-					<p>
-						<button type="button"
-							class="content__more underline exp__play _anim-item _anim-translate_right _anim-delay_600 _not-active">Play
+					<div class="_anim-item _anim-translate_right _not-active">
+						<h4 class="subtitle exp__subtitle _anim-body">
+							a better claims experience
+						</h4>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_200 _not-active">
+						<h2 class="title exp__title _anim-body">
+							Give your people a plan that pays in hours—not weeks.
+						</h2>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_400 _not-active">
+						<p class="text exp__text _anim-body">
+							Your team can’t wait for peace of mind. Brella pays on diagnosis, so members can file a claim
+							sooner
+							and
+							get paid faster via our Member Portal or mobile app.
+						</p>
+					</div>
+					<div class="_anim-item _anim-translate_right _anim-delay_600 _not-active">
+						<button type="button" class="content__more underline exp__play _anim-body">Play
 							Video</button>
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="employers _anim-item _not-active">
-		<div class="employers__container">
-			<div class="employers__body">
-				<div class="type-block employers__content">
-					<h4 class="subtitle employers__subtitle _anim-item _anim-translate_left _not-active">
-						for employers
-					</h4>
-					<h2 class="title employers__title _anim-item _anim-translate_left _anim-delay_200 _not-active">
-						Easy enrollment meets simple administration.
-					</h2>
-					<p class="text employers__text _anim-item _anim-translate_left _anim-delay_400 _not-active">
-						Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or
-						we’ll
-						plug
-						into yours.
-					</p>
-					<p>
-						<a href="##"
-							class="content__more underline employers__more _anim-item _anim-translate_left _anim-delay_600 _not-active">Learn
-							more</a>
-					</p>
+	<section class="employers _anim-item _anim-no-hide _not-active">
+		<div class="employers__wrapper _anim-body">
+			<div class="employers__container">
+				<div class="employers__body">
+					<div class="type-block employers__content">
+						<div class="_anim-item _anim-translate_left _not-active">
+							<h4 class="subtitle employers__subtitle _anim-body">
+								for employers
+							</h4>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_200 _not-active">
+							<h2 class="title employers__title _anim-body">
+								Easy enrollment meets simple administration.
+							</h2>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_400 _not-active">
+							<p class="text employers__text _anim-body">
+								Brella brings 100% paperless implementation, enrollment, and admin. Plug into our platforms or
+								we’ll
+								plug
+								into yours.
+							</p>
+						</div>
+						<div class="_anim-item _anim-translate_left _anim-delay_600 _not-active">
+							<a href="##" class="content__more underline employers__more _anim-body">Learn
+								more</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -379,31 +408,38 @@
 		<div class="posts__container">
 			<div class="posts__wrapper">
 				<a href="##" class="posts__post post _anim-item _anim-translate_left _not-active">
-					<div class="post__img">
-						<img src="img/podcast.jpg" alt="">
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<img src="img/podcast.jpg" alt="">
+						</div>
+						<h4 class="subtitle post__subtitle">Podcast</h4>
+						<h3 class="title post__title">
+							Better Voluntary Benefits with NFP Voluntary Benefits Practice Leader, Kim Heald
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Podcast</h4>
-					<h3 class="title post__title">
-						Better Voluntary Benefits with NFP Voluntary Benefits Practice Leader, Kim Heald
-					</h3>
 				</a>
-				<a href="##" class="posts__post post _anim-item _anim-translate_top _anim-delay_200 _not-active">
-					<div class="post__img">
-						<img src="img/innovation.jpg" alt="">
+				<a href="##"
+					class="posts__post post _anim-item _anim-translate_top _anim-delay_200 _anim-no-hide _not-active">
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<img src="img/innovation.jpg" alt="">
+						</div>
+						<h4 class="subtitle post__subtitle">Insurance Innovation</h4>
+						<h3 class="title post__title">
+							How to Design Simpler Insurance Benefits
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Insurance Innovation</h4>
-					<h3 class="title post__title">
-						How to Design Simpler Insurance Benefits
-					</h3>
 				</a>
 				<a href="##" class="posts__post post _anim-item _anim-translate_right _not-active">
-					<div class="post__img">
-						<img src="img/strategy.jpg" alt="">
+					<div class="post__body _anim-body">
+						<div class="post__img">
+							<img src="img/strategy.jpg" alt="">
+						</div>
+						<h4 class="subtitle post__subtitle">Benefits Strategy</h4>
+						<h3 class="title post__title">
+							Executive Benefits Outlook with Dan Aceti
+						</h3>
 					</div>
-					<h4 class="subtitle post__subtitle">Benefits Strategy</h4>
-					<h3 class="title post__title">
-						Executive Benefits Outlook with Dan Aceti
-					</h3>
 				</a>
 			</div>
 		</div>
@@ -412,8 +448,9 @@
 		<div class="full-screen-section__wrapper start__wrapper">
 			<div class="full-screen-section__container start__container">
 				<div class="full-screen-section__body start__body">
-					<div class="full-screen-section-block full-screen-section-block__1 start-block start-block__1">
-						<div class="full-screen-section-bg full-screen-section-bg__1 start-bg start-bg__1">
+					<div
+						class="full-screen-section-block full-screen-section-block__1 start-block start-block__1 _anim-item _anim-no-hide _not-active">
+						<div class="full-screen-section-bg full-screen-section-bg__1 start-bg start-bg__1 _anim-body">
 							<img src="img/cta-bg.jpg" alt="">
 						</div>
 					</div>
@@ -422,12 +459,18 @@
 						</div>
 						<div class="full-screen-section__content start__content">
 							<h2 class="title start__title">
-								<p>Ready to explore Brella’s supplemental health solution?</p>
-								<p>Let’s talk.</p>
+								<div class="_anim-item _anim-translate_top _not-active">
+									<p class="_anim-body">Ready to explore Brella’s supplemental health solution?</p>
+								</div>
+								<div class="_anim-item _anim-translate_top _anim-delay_200 _not-active">
+									<p class="_anim-body">Let’s talk.</p>
+								</div>
 							</h2>
-							<button class="btn btn__green start__btn">
-								Get in touch
-							</button>
+							<div class="_anim-item _anim-translate_top _anim-delay_400 _not-active">
+								<button class="btn btn__green start__btn _anim-body">
+									Get in touch
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
