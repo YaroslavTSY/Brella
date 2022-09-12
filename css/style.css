@@ -367,6 +367,10 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--base-color);
   color: var(--main-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body._lock {
@@ -382,6 +386,37 @@ body svg path {
 
 a {
   color: var(--main-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, span::-moz-selection {
+  background-color: var(--base-color);
+  color: var(--orange-color);
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+span::selection {
+  background-color: var(--base-color);
+  color: var(--orange-color);
 }
 
 button {
@@ -852,13 +887,6 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin-right: 1.56rem;
-}
-
-.header__content._active .menu__list {
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-  opacity: 1;
 }
 
 .header-content__wrapper {
@@ -1629,7 +1657,7 @@ body._pc .login:hover::after {
 }
 
 .exp__video img {
-  border-radius: 40px 40px 0 0;
+  border-radius: 34.5px 34.5px 0 0;
   height: 31.25rem;
   overflow: hidden;
   -o-object-position: center bottom;
@@ -2649,10 +2677,6 @@ body._pc .login:hover::after {
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.jpg);
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%), url(../img/employers.jpg); }
 
-  .exp__body._not-active .exp__video {
-    margin-top: -50%;
-  }
-
   .post._not-active._anim-translate_left > ._anim-body {
     -webkit-transform: translateX(-100%) translateY(0);
         -ms-transform: translateX(-100%) translateY(0);
@@ -2766,6 +2790,13 @@ body._pc .login:hover::after {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+
+  .exp__body._not-active .exp__video {
+    margin-top: -50%;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
 
   .no-webp .employers {
