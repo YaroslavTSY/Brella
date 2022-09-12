@@ -38,12 +38,6 @@
 	&__content {
 		display: flex;
 		@include adaptiv-value("margin-right", 25, 10, 1);
-		&._active {
-			.menu__list {
-				transform: none;
-				opacity: 1;
-			}
-		}
 	}
 
 	&-content__wrapper {

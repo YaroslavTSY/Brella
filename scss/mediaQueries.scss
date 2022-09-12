@@ -304,8 +304,14 @@
 			}
 		}
 	}
-	.exp__body {
-		flex-direction: column-reverse;
+	.exp {
+		&__body {
+			flex-direction: column-reverse;
+			&._not-active .exp__video {
+				margin-top: -50%;
+				transform: translateX(0);
+			}
+		}
 	}
 
 	.employers {

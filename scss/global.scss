@@ -15,10 +15,25 @@ body {
 	svg path {
 		transition: fill 0.3s ease 0s;
 	}
+	user-select: none;
 }
 
 a {
 	color: var(--main-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	user-select: text;
+	&::selection {
+		background-color: var(--base-color);
+		color: var(--orange-color);
+	}
 }
 
 button {

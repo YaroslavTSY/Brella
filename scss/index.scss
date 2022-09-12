@@ -449,9 +449,6 @@
 			.exp__video {
 				transform: translateX(0) translateY(100%);
 				flex: 0;
-				@media (max-width: em(767px, $base-font-size)) {
-					margin-top: -50%;
-				}
 			}
 		}
 	}

@@ -69,11 +69,15 @@ login.addEventListener("click", function () {
 
 const iconMenu = document.querySelector('.menu__icon');
 const headerContent = document.querySelector('.header__content');
+const nav = document.querySelector('#nav');
 if (iconMenu) {
 	iconMenu.addEventListener('click', function () {
 		document.body.classList.toggle('_lock');
 		iconMenu.classList.toggle('_active');
 		headerContent.classList.toggle('_active');
+		if (window.matchMedia("(max-width: 991px)").matches) {
+			nav.classList.toggle('_not-active');
+		}
 	});
 }
 
@@ -137,24 +141,6 @@ if (animItems.length > 0) {
 		animOnScroll();
 	}, 300);
 }
-
-// let nav = document.getElementById("nav");
-// let pointer = document.getElementById("pointer");
-// let links = document.getElementsByClassName("menu__link");
-
-// pointer.style.width = "100px";
-
-// for (let i = 0; i < links.length; i++) {
-// 	let current = links[i];
-// 	current.dataset.order = i * 100 + "%";
-// 	current.addEventListener('hover', movePointer);
-// }
-
-// function movePointer(e) {
-// 	let order = e.currentTarget.dataset.order;
-// 	pointer.style.transform = "translate3d(" + order + ",0,0)";
-// 	pointer.style.width = this.current.width;
-// }
 
 
 
